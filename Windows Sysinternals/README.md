@@ -10,7 +10,8 @@ Live Tools: https://live.sysinternals.com/
 
 ## Windows Internals by David Solomon and Mark Russinovich
 
-
+[Mark Russinovich - Windows Internals, P1.pdf](https://github.com/EvolvingSysadmin/Windows-Tools/blob/main/Windows%20Sysinternals/Documentation/Mark%20Russinovich%20-%20Windows%20Internals%2C%20P1.pdf)
+[Mark Russinovich - Windows Internals, P2.pdf](https://github.com/EvolvingSysadmin/Windows-Tools/raw/main/Windows%20Sysinternals/Documentation/Mark%20Russinovich%20-%20Windows%20Internals%2C%20P2.pdf)
 
 ## Included Tools
 
