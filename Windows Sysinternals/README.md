@@ -10,7 +10,7 @@ Live Tools: https://live.sysinternals.com/
 
 ## Included Tools
 
-The included suite here is PsTools Version 2.44
+_The included suite here is PsTools Version 2.44_
 
 AccessChk - AccessChk is a command-line tool for viewing the effective permissions on files, registry keys, services, processes, kernel objects, and more.
 
