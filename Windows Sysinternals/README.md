@@ -8,6 +8,10 @@ Microsoft Official Downloads Page: https://docs.microsoft.com/en-us/sysinternals
 
 Live Tools: https://live.sysinternals.com/
 
+## Windows Internals by David Solomon and Mark Russinovich
+
+
+
 ## Included Tools
 
 _The included suite here is PsTools Version 2.44_
