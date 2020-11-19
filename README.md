@@ -2,7 +2,7 @@
 
 ## Windows Operating System Troubleshooting Tools
 
-[Windows Sysinternals](https://github.com/EvolvingSysadmin/Windows-Tools/tree/main/Windows%20Sysinternals)
+[Windows Sysinternals](https://github.com/EvolvingSysadmin/Windows-Tools/tree/main/Windows%20Sysinternals): https://github.com/EvolvingSysadmin/Windows-Tools/tree/main/Windows%20Sysinternals
 
 ## Active Directory Tools
 
