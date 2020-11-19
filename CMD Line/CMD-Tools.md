@@ -1,8 +1,8 @@
 # Windows CMD Line Tools #
 
-### Configure a Windows machine as a WPA2-PSK Access Point ### 
+## Configure a Windows machine as a WPA2-PSK Access Point ## 
 
-# Usage scenario: Share a Windows machine’s Internet access with other
+### Usage scenario: Share a Windows machine’s Internet access with other ###
 systems wirelessly, or use a Windows machine to attract wireless clients
 into joining it for exploitation purposes #
 
