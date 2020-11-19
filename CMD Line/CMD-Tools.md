@@ -1,5 +1,13 @@
 # Windows CMD Line Tools #
 
+## Get Public IP Address
+
+	curl -4 icanhazip.com
+
+or
+
+	dig +short myip.opendns.com @resolver1.opendns.com
+
 ## Configure a Windows machine as a WPA2-PSK Access Point ## 
 
 ### Usage scenario: Share a Windows machine’s Internet access with other systems wirelessly, or use a Windows machine to attract wireless clients into joining it for exploitation purposes
