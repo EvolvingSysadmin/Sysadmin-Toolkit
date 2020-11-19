@@ -1,0 +1,1 @@
+Copy-VMFile -Name kali-linux -SourcePath 'D:\Code\Python\Python-Security-Scripting\Python-Networking\BannerGrabbing.py' -DestinationPath '/home/condor/Documents' -FileSource Host
