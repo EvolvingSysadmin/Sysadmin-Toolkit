@@ -4,7 +4,7 @@
 
 [Active Directory Powershell Scripts](https://github.com/EvolvingSysadmin/Windows-Tools/tree/main/Powershell/Active%20Directory%20Powershell%20Scripts): AD Powershell Script Collection
 
-[Active Reign](https://github.com/m8r0wn/ActiveReign): Network Discovery Tool
+[Active Reign](https://github.com/m8r0wn/ActiveReign): AD Network Discovery Tool
 
 ## Operating System
 
