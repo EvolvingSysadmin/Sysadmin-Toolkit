@@ -1,15 +1,16 @@
 # Windows-Tools
 
-## Windows Operating System Troubleshooting Tools
+## Operating System
 
-[Windows Sysinternals](https://github.com/EvolvingSysadmin/Windows-Tools/tree/main/Windows%20Sysinternals): https://github.com/EvolvingSysadmin/Windows-Tools/tree/main/Windows%20Sysinternals
+[Windows Administration Powershell Scripts](https://github.com/EvolvingSysadmin/Windows-Tools/tree/main/Windows%20Sysinternals): Links to Windows Sysinternals
 
-## Active Directory Tools
+[Windows Sysinternals](https://github.com/EvolvingSysadmin/Windows-Tools/tree/main/Windows%20Sysinternals): Links to Windows Sysinternals
 
-[Active Reign](https://github.com/m8r0wn/ActiveReign): Network Discovery Tool
+## Active Directory
 
 [Active Directory Powershell Scripts](https://github.com/EvolvingSysadmin/Windows-Tools/tree/main/Powershell/Active%20Directory%20Powershell%20Scripts): My AD Powershell Script Collection
 
+[Active Reign](https://github.com/m8r0wn/ActiveReign): Network Discovery Tool
 
 
 ## User & Computer Administration
