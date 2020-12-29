@@ -6,6 +6,10 @@
 * Tool: [new-userscsv.ps1](https://github.com/EvolvingSysadmin/Systems-Administration/tree/main/Tools/users/new-userscsv)
 * Usage: input unique user info into CSV (passwords must meet domain complexity requirements) -> point script to CSV
 
+<em>User Info Batch Tool</em>
+* Tool: [WinUserEnum.bat](https://github.com/EvolvingSysadmin/Systems-Administration/tree/main/Tools/users/WinUserEnum.bat)
+* Usage: run for options for obtaining user info
+
 ## Domain Administration
 
 <em>Domain Computers HTML Report</em>
@@ -20,7 +24,9 @@
 
 ## Network Analysis
 
-
+<em>Network Info Batch Script</em>
+* Tool: [WinNetEnum.bat](https://github.com/EvolvingSysadmin/Systems-Administration/tree/main/Tools/network/WinNetEnum.bat)
+* Usage: run for options for obtaining windows network info
 
 ## System Analysis
 
