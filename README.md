@@ -1,23 +1,20 @@
-# Windows Tools
+# Systems Administration Toolkit
 
-## Active Directory
+## User Administration ##
 
-[Active Directory Powershell Scripts](https://github.com/EvolvingSysadmin/Windows-Tools/tree/main/Powershell/Active%20Directory%20Powershell%20Scripts): AD Powershell Script Collection
+<em>Bulk Users from CSV</em>
+* Tool: [new-userscsv.ps1](tools\users\new-userscsv)
+* Usage: input unique user info into CSV (passwords must meet domain complexity requirements) -> point script to CSV
 
-[Active Reign](https://github.com/m8r0wn/ActiveReign): AD Network Discovery Tool
+## Domain Administration
 
-## Operating System
+## Computer Administration
 
-[Windows Administration Powershell Scripts](https://github.com/EvolvingSysadmin/Windows-Tools/tree/main/Powershell/Windows%20Administration%20Powershell%20Scripts): Windows Administration Powershell Script Collection
+## Network Analysis
 
-[Windows Sysinternals](https://github.com/EvolvingSysadmin/Windows-Tools/tree/main/Windows%20Sysinternals): Links to Windows Sysinternals
+## System Analysis
 
-## Remote & Network
-
-[Remote & Net Admin Powershell Scripts](https://github.com/EvolvingSysadmin/Windows-Tools/tree/main/Powershell/Remote%20%26%20Net%20Admin%20Powershell%20Scripts): Remote & Network Administration Powershell Script Collection
+## General Tools
 
 ## Resources
 
-[Powershell Resources](https://github.com/EvolvingSysadmin/Windows-Tools/tree/main/Powershell/Powershell%20Resources): Collection of Powershell Resources
-
-[CMD Resources](https://github.com/EvolvingSysadmin/Windows-Tools/tree/main/CMD): Collection of CMD Resources
