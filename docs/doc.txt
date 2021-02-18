@@ -1,1 +1,6 @@
 https://github.com/Prakash82x/PowerShell
+
+
+
+https://docs.microsoft.com/en-us/powershell/module/exchange/search-mailbox?view=exchange-ps
+
