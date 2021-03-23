@@ -34,108 +34,112 @@ PowerShell scripts, PowerShell resources, and general Systems Administration too
 
 ## Domain Administration
 
-<em>Domain Info Batch Tool</em>
+### <em>Domain Info Batch Tool</em>
 * Tool: [WinDomainEnum.bat](/tools/domain/WinDomainEnum.bat)
 * Usage: run for options for obtaining domain info
 
-<em>Domain Computers HTML Report</em>
+### <em>Domain Computers HTML Report</em>
  * Tool: [get-adpcreport.ps1](/tools/domain/get-adpcreport.ps1)
  * Usage: run to generate report in same directory
 
 ## Host Administration
 
-<em>Enable Remote Desktop Remotely</em>
+### <em>Enable Remote Desktop Remotely</em>
  * Tool: [enable-remotedesktop.ps1](/tools/computers/enable-remotedesktop.ps1)
  * Usage: run script to import function, use Enable-RemoteDesktop -ComputerName $Computer or other parameter in synopsis of script
 
- <em>Remote Powershell Administration</em>
+### <em>Remote Powershell Administration</em>
   * Tool: [enter-remotesessions.ps1](/tools/computers/enter-remotesessions.ps1)
   * Usage: contains commands for remote administration, run portions of script individually
 
-<em>Test if Remote Desktop is Enabled</em>
+### <em>Test if Remote Desktop is Enabled</em>
  * Tool: [test-remotedesktop.ps1](/tools/computers/test-remotedesktop.ps1)
  * Usage: run script to import function, use Test-RemoteDesktopIsEnabled -ComputerName $target
 
-<em> Windows Enumeration PowerShell Script </em>
+### <em> Windows Enumeration PowerShell Script </em>
  * Tool: [WindowsEnum.ps1](/tools/computers/WindowsEnum.ps1)
  * Usage: turn off script execution policy and run (Set-Execution -ExecutionPolicy Unrestricted)
 
-<em>Windows Enumeration Batch Script </em>
+### <em>Windows Enumeration Batch Script </em>
  * Tool: [WinSysEnum.bat](/tools/computers/WinSysEnum.bat)
  * Usage: run for options for obtaining computer info
 
-<em>Basic OS & Hardware Report</em>
+### <em>Basic OS & Hardware Report</em>
 * Tool: [get-computer-report.ps1](/tools/computers/get-computer-report.ps1)
 * Usage: run script to import function Get-ComputerInfo --> Get-ComputerInfo -ComputerName $Target
 
-<em>Get Basic Process Info</em>
+### <em>Get Basic Process Info</em>
 * Tool: [get-processinfo.ps1](/tools/computers/get-processinfo.ps1)
 * Usage: run specific commands within script
 
-<em>Export Process Start Info to txt</em>
+### <em>Export Process Start Info to txt</em>
 * Tool: [get-processtime.vbs](/tools/computers/get-processtime.vbs)
 * Usage: run to get txt with basic process info in same directory
 
-<em>Silently Install Chrome</em>
+### <em>Silently Install Chrome</em>
 * Tool: [install-chrome.ps1](/tools/maintenance/install-chrome.ps1)
 * Usage: run locally to silently install Chrome on host
 
-<em>Remove Print Jobs</em>
+### <em>Remove Print Jobs</em>
 * Tool: [remove-printjobs.ps1](/tools/maintenance/install-chrome.ps1)
 * Usage: run then input hostname or IP of target
 
-<em>Remove Print Jobs</em>
+### <em>Get Windows Product Key</em>
+* Command: 
+```
+wmic path SoftwareLicensingService get OA3xOriginalProductKey
+```
 
 ## Network Analysis
 
-<em>Network Info Batch Script</em>
+### <em>Network Info Batch Script</em>
 * Tool: [WinNetEnum.bat](/tools/network/WinNetEnum.bat)
 * Usage: run for options for obtaining windows network info
 
-<em>Traceroute Verbose</em>
+### <em>Traceroute Verbose</em>
 * Tool: [get-traceroute.ps1](/tools/network/get-traceroute.ps1)
 * Usage: run script and input IP to trace to
 
-<em>Invoke Ping in Parallel</em>
+### <em>Invoke Ping in Parallel</em>
 * Tool: [invoke-ping.ps1](/tools/network/invoke-ping.ps1)
 * Usage: run script to import function Invoke-Ping -> then run Invoke-Ping $SinglePC or Invoke-Ping $ComputersStoredinVariable
 
-<em>Single Host TCP Port Scan</em>
+### <em>Single Host TCP Port Scan</em>
 * Tool: [port-scan-tcp.ps1](/tools/network/port-scan-tcp.ps1) 
 * Usage: run script to import function port-scan-tcp -> then run port-scan-tcp $TargetIP $Port
 
-<em>Port Scanning Options with PowerShell</em>
+### <em>Port Scanning Options with PowerShell</em>
 * Tool: [get-portscan.ps1](/tools/network/get-portscan.ps1)
 * Usage: run individual commands for port scanning options
 
 ## Forensics
 
- <em>Last User Logon</em>
+### <em>Last User Logon</em>
  * Tool: [get-lastlogon.ps1](/tools/analysis/get-lastlogon.ps1)
  * Usage: reports hostname, username, IP, and date/time to a central log file (log file optional, needs to be specified)
 
- <em>Last Boot Time</em>
+### <em>Last Boot Time</em>
  * Tool: [get-lastboot.ps1](/tools/analysis/get-lastboot.ps1)
  * Usage: run selections within script for getting local and remote boot times
 
+### ## Powershell Components
+
+### <em>Have PowerShell Prompt for Input Variables</em>
+* Tool: [variable-prompt.ps1](/tools/powershell/variable-prompt.ps1)
 ## General Tools
 
-<em>Putty SSH Client</em>
+### <em>Putty SSH Client</em>
 * Tool: [putty7.0.exe](/tools/general/putty7.0.exe)
 * Usage: run exe, [get latest version here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
-<em>FileZilla FTP Client</em>
+### <em>FileZilla FTP Client</em>
 * Tool: [FileZilla_3.51.0_win64_sponsored-setup.exe](/tools/general/FileZilla_3.51.0_win64_sponsored-setup.exe)
 * Usage: run exe, [get latest version here](https://filezilla-project.org/download.php?type=client)
 
-<em>WireShark Packet Analyzer</em>
+### <em>WireShark Packet Analyzer</em>
 * Tool: [Wireshark-win64-3.4.2.exe](/tools/general/Wireshark-win64-3.4.2.exe)
 * Usage: run exe, [get latest version here](https://www.wireshark.org/#download)
 
-## Powershell Components
-
-<em>Have PowerShell Prompt for Input Variables</em>
-* Tool: [variable-prompt.ps1](/tools/powershell/variable-prompt.ps1)
-
 ## Resources
 * PowerShell Commands: https://ss64.com/ps/
+* Windows PowerShell Github: https://github.com/PowerShell/PowerShell
