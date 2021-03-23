@@ -4,7 +4,7 @@ PowerShell scripts, PowerShell resources, and general Systems Administration too
 
 ## TOC
 
-* [User Administration](##User-Administration)
+* [User Administration](#User-Administration)
 * [Domain Administration](##Domain-Administration)
 * [Host Administration](##Host-Administration)
 * [Network Analysis](##Network-Analysis)
@@ -85,11 +85,10 @@ PowerShell scripts, PowerShell resources, and general Systems Administration too
 * Usage: run then input hostname or IP of target
 
 ### <em>Get Windows Product Key</em>
-* Command: 
+* Usage: run in command prompt
 ```
 wmic path SoftwareLicensingService get OA3xOriginalProductKey
 ```
-
 ## Network Analysis
 
 ### <em>Network Info Batch Script</em>
