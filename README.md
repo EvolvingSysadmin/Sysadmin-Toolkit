@@ -5,14 +5,14 @@ PowerShell scripts, PowerShell resources, and general Systems Administration too
 ## TOC
 
 * [User Administration](#User-Administration)
-* [Domain Administration](##Domain-Administration)
-* [Host Administration](##Host-Administration)
-* [Network Analysis](##Network-Analysis)
-* [System Analysis](##System-Administration)
-* [Forensics](##Forensics)
-* [General Tools](##General-Tools)
-* [PowerShell Components](##PowerShell-Components)
-* [Resources](##Resources)
+* [Domain Administration](#Domain-Administration)
+* [Host Administration](#Host-Administration)
+* [Network Analysis](#Network-Analysis)
+* [System Analysis](#System-Administration)
+* [Forensics](#Forensics)
+* [General Tools](#General-Tools)
+* [PowerShell Components](#PowerShell-Components)
+* [Resources](#Resources)
 
 ## User Administration ##
 
@@ -32,6 +32,10 @@ PowerShell scripts, PowerShell resources, and general Systems Administration too
 * Tool: [get-azuserinfo.ps1](/tools/users/get-azuserinfo.ps1)
 * Usage: contains individual commands for navigating Azure user objects
 
+ ### <em>Get SID Info</em>
+ * Tool: [get-sidinfo.ps1](/tools/users/getsidinfo.ps1)
+ * Usage: replace either username or SID variable and run selection in PowerShell ISE to obtain info
+
 ## Domain Administration
 
 ### <em>Domain Info Batch Tool</em>
@@ -45,35 +49,35 @@ PowerShell scripts, PowerShell resources, and general Systems Administration too
 ## Host Administration
 
 ### <em>Enable Remote Desktop Remotely</em>
- * Tool: [enable-remotedesktop.ps1](/tools/computers/enable-remotedesktop.ps1)
+ * Tool: [enable-remotedesktop.ps1](/tools/hosts/enable-remotedesktop.ps1)
  * Usage: run script to import function, use Enable-RemoteDesktop -ComputerName $Computer or other parameter in synopsis of script
 
 ### <em>Remote Powershell Administration</em>
-  * Tool: [enter-remotesessions.ps1](/tools/computers/enter-remotesessions.ps1)
+  * Tool: [enter-remotesessions.ps1](/tools/hosts/enter-remotesessions.ps1)
   * Usage: contains commands for remote administration, run portions of script individually
 
 ### <em>Test if Remote Desktop is Enabled</em>
- * Tool: [test-remotedesktop.ps1](/tools/computers/test-remotedesktop.ps1)
+ * Tool: [test-remotedesktop.ps1](/tools/hosts/test-remotedesktop.ps1)
  * Usage: run script to import function, use Test-RemoteDesktopIsEnabled -ComputerName $target
 
 ### <em> Windows Enumeration PowerShell Script </em>
- * Tool: [WindowsEnum.ps1](/tools/computers/WindowsEnum.ps1)
+ * Tool: [WindowsEnum.ps1](/tools/hosts/WindowsEnum.ps1)
  * Usage: turn off script execution policy and run (Set-Execution -ExecutionPolicy Unrestricted)
 
 ### <em>Windows Enumeration Batch Script </em>
- * Tool: [WinSysEnum.bat](/tools/computers/WinSysEnum.bat)
+ * Tool: [WinSysEnum.bat](/tools/hosts/WinSysEnum.bat)
  * Usage: run for options for obtaining computer info
 
 ### <em>Basic OS & Hardware Report</em>
-* Tool: [get-computer-report.ps1](/tools/computers/get-computer-report.ps1)
+* Tool: [get-computer-report.ps1](/tools/hosts/get-computer-report.ps1)
 * Usage: run script to import function Get-ComputerInfo --> Get-ComputerInfo -ComputerName $Target
 
 ### <em>Get Basic Process Info</em>
-* Tool: [get-processinfo.ps1](/tools/computers/get-processinfo.ps1)
+* Tool: [get-processinfo.ps1](/tools/hosts/get-processinfo.ps1)
 * Usage: run specific commands within script
 
 ### <em>Export Process Start Info to txt</em>
-* Tool: [get-processtime.vbs](/tools/computers/get-processtime.vbs)
+* Tool: [get-processtime.vbs](/tools/hosts/get-processtime.vbs)
 * Usage: run to get txt with basic process info in same directory
 
 ### <em>Silently Install Chrome</em>
@@ -89,6 +93,33 @@ PowerShell scripts, PowerShell resources, and general Systems Administration too
 ```
 wmic path SoftwareLicensingService get OA3xOriginalProductKey
 ```
+
+### <em>Get Public IP Address</em>
+* Usage: run in command prompt
+```
+curl -4 icanhazip.com
+```
+
+### <em>Get All Running Process Attributes </em>
+* Usage: run in command prompt
+``` 
+wmic process list full
+```
+
+### <em>Get List of Services Inside Each Process</em>
+* Usage: run in command prompt
+```
+tasklist /svc
+```
+
+### <em>Get Restart Events</em>
+* Tool: [get-restartevents.ps1](/tools/hosts/get-restartevents.ps1)
+* Usage: input hosts into .\Servers.txt relative path and run script to get restart events
+
+### <em>Get Local Users</em>
+* Tool: [get-localusers.ps1](/tools/hosts/get-localusers.ps1)
+* Usage: input against servers in relative servers.txt, execute, and view exported LocalUsers.csv
+
 ## Network Analysis
 
 ### <em>Network Info Batch Script</em>
@@ -110,6 +141,12 @@ wmic path SoftwareLicensingService get OA3xOriginalProductKey
 ### <em>Port Scanning Options with PowerShell</em>
 * Tool: [get-portscan.ps1](/tools/network/get-portscan.ps1)
 * Usage: run individual commands for port scanning options
+
+### <em>Get a list of TCP and UDP activity every 1 second</em>
+* Usage: get connection from specific IP/Port for specific interval in seconds in elevated command prompt
+```
+netstat -naob 1 | find "<IPADDR or PORT>"
+```
 
 ## Forensics
 
