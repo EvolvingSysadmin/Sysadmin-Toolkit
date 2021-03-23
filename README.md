@@ -17,8 +17,9 @@ PowerShell scripts, PowerShell resources, and general Systems Administration too
 ## User Administration ##
 
 ### <em>Bulk Users from CSV</em>
-* Tool: [new-userscsv.ps1](../tools/users/new-userscsv/new-userscsv.ps1)
+* Tool: [new-userscsv.ps1](../Tools/users/new-userscsv/new-userscsv.ps1)
 * Usage: input unique user info into CSV (passwords must meet domain complexity requirements) -> point script to CSV
+
 
 ### <em>User Info Batch Tool</em>
 * Tool: [WinUserEnum.bat](https://github.com/EvolvingSysadmin/Systems-Administration/tree/main/Tools/users/WinUserEnum.bat)
