@@ -1,5 +1,0 @@
-prompt for user input variables: $Server = Read-Host -Prompt 'Input your server  name'
-
-https://www.itprotoday.com/powershell/prompting-user-input-powershell
-
-https://ss64.com/ps/

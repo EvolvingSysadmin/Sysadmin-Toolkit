@@ -1,20 +1,34 @@
 # Systems Administration Toolkit
 
+PowerShell scripts, PowerShell resources, and general Systems Administration tools.
+
+## TOC
+
+* [User Administration](##User-Administration)
+* [Domain Administration](##Domain-Administration)
+* [Host Administration](##Host-Administration)
+* [Network Analysis](##Network-Analysis)
+* [System Analysis](##System-Administration)
+* [Forensics](##Forensics)
+* [General Tools](##General-Tools)
+* [PowerShell Components](##PowerShell-Components)
+* [Resources](##Resources)
+
 ## User Administration ##
 
-<em>Bulk Users from CSV</em>
-* Tool: [new-userscsv.ps1](https://github.com/EvolvingSysadmin/Systems-Administration/tree/main/Tools/users/new-userscsv)
+### <em>Bulk Users from CSV</em>
+* Tool: [new-userscsv.ps1](/Systems-Administration/main/Tools/users/new-userscsv)
 * Usage: input unique user info into CSV (passwords must meet domain complexity requirements) -> point script to CSV
 
-<em>User Info Batch Tool</em>
+### <em>User Info Batch Tool</em>
 * Tool: [WinUserEnum.bat](https://github.com/EvolvingSysadmin/Systems-Administration/tree/main/Tools/users/WinUserEnum.bat)
 * Usage: run for options for obtaining user info
 
-<em>Get Local Admin</em>
+### <em>Get Local Admin</em>
 * Tool: [get-localadministrator.ps1](https://github.com/EvolvingSysadmin/Systems-Administration/tree/main/Tools/users/get-localadministrator.ps1)
 * Usage: run script to import function Get-LocalAdministratorBuiltin --> Get-LocalAdministratorBuiltin -ComputerName $Target
 
-<em>Get Azure User Info</em>
+### <em>Get Azure User Info</em>
 * Tool: [get-azuserinfo.ps1](https://github.com/EvolvingSysadmin/Systems-Administration/tree/main/Tools/users/get-azuserinfo.ps1)
 * Usage: contains individual commands for navigating Azure user objects
 
@@ -28,7 +42,7 @@
  * Tool: [get-adpcreport.ps1](https://github.com/EvolvingSysadmin/Systems-Administration/tree/main/Tools/domain/get-adpcreport.ps1)
  * Usage: run to generate report in same directory
 
-## Computer Administration
+## Host Administration
 
 <em>Enable Remote Desktop Remotely</em>
  * Tool: [enable-remotedesktop.ps1](https://github.com/EvolvingSysadmin/Systems-Administration/tree/main/Tools/computers/enable-remotedesktop.ps1)
@@ -62,6 +76,16 @@
 * Tool: [get-processtime.vbs](https://github.com/EvolvingSysadmin/Systems-Administration/tree/main/Tools/computers/get-processtime.vbs)
 * Usage: run to get txt with basic process info in same directory
 
+<em>Silently Install Chrome</em>
+* Tool: [install-chrome.ps1](https://github.com/EvolvingSysadmin/Systems-Administration/tree/main/Tools/maintenance/install-chrome.ps1)
+* Usage: run locally to silently install Chrome on host
+
+<em>Remove Print Jobs</em>
+* Tool: [remove-printjobs.ps1](https://github.com/EvolvingSysadmin/Systems-Administration/tree/main/Tools/maintenance/install-chrome.ps1)
+* Usage: run then input hostname or IP of target
+
+<em>Remove Print Jobs</em>
+
 ## Network Analysis
 
 <em>Network Info Batch Script</em>
@@ -84,7 +108,7 @@
 * Tool: [get-portscan.ps1](https://github.com/EvolvingSysadmin/Systems-Administration/tree/main/Tools/network/get-portscan.ps1)
 * Usage: run individual commands for port scanning options
 
-## System Analysis
+## Forensics
 
  <em>Last User Logon</em>
  * Tool: [get-lastlogon.ps1](https://github.com/EvolvingSysadmin/Systems-Administration/tree/main/Tools/analysis/get-lastlogon.ps1)
@@ -93,16 +117,6 @@
  <em>Last Boot Time</em>
  * Tool: [get-lastboot.ps1](https://github.com/EvolvingSysadmin/Systems-Administration/tree/main/Tools/analysis/get-lastboot.ps1)
  * Usage: run selections within script for getting local and remote boot times
-
-## Maintenance
-
-<em>Silently Install Chrome</em>
-* Tool: [install-chrome.ps1](https://github.com/EvolvingSysadmin/Systems-Administration/tree/main/Tools/maintenance/install-chrome.ps1)
-* Usage: run locally to silently install Chrome on host
-
-<em>Remove Print Jobs</em>
-* Tool: [remove-printjobs.ps1](https://github.com/EvolvingSysadmin/Systems-Administration/tree/main/Tools/maintenance/install-chrome.ps1)
-* Usage: run then input hostname or IP of target
 
 ## General Tools
 
@@ -118,4 +132,10 @@
 * Tool: [Wireshark-win64-3.4.2.exe](https://github.com/EvolvingSysadmin/Systems-Administration/tree/main/Tools/general/Wireshark-win64-3.4.2.exe)
 * Usage: run exe, [get latest version here](https://www.wireshark.org/#download)
 
+## PowerShell Components
+
+<em>Have PowerShell Prompt for Input Variables</em>
+* Tool: [variable-prompt.ps1](https://github.com/EvolvingSysadmin/Systems-Administration/tree/main/Tools/powershell/variable-prompt.ps1)
+
 ## Resources
+* PowerShell Commands: https://ss64.com/ps/
