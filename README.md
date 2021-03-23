@@ -17,7 +17,7 @@ PowerShell scripts, PowerShell resources, and general Systems Administration too
 ## User Administration ##
 
 ### <em>Bulk Users from CSV</em>
-* Tool: [new-userscsv.ps1](../tools/users/new-userscsv/new-userscsv.ps1)
+* Tool: [new-userscsv.ps1](/tools/users/new-userscsv/)
 
 [new-userscsv.ps1](..\tools\users\new-userscsv\new-userscsv.ps1)
 * Usage: input unique user info into CSV (passwords must meet domain complexity requirements) -> point script to CSV
@@ -135,7 +135,7 @@ PowerShell scripts, PowerShell resources, and general Systems Administration too
 * Tool: [Wireshark-win64-3.4.2.exe](https://github.com/EvolvingSysadmin/Systems-Administration/tree/main/Tools/general/Wireshark-win64-3.4.2.exe)
 * Usage: run exe, [get latest version here](https://www.wireshark.org/#download)
 
-## PowerShell Components
+## Powershell Components
 
 <em>Have PowerShell Prompt for Input Variables</em>
 * Tool: [variable-prompt.ps1](https://github.com/EvolvingSysadmin/Systems-Administration/tree/main/Tools/powershell/variable-prompt.ps1)
