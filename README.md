@@ -170,19 +170,19 @@ netstat -naob 1 | find "<IPADDR or PORT>"
 
 ## Host Forensics
 
-### <em>1</em>
+### <em>PE-bear</em>
 * Tool: [PE-bear.exe](/tools/forensics/PEbear/)
 * Usage: reverse engineering/debugging tool for PE/exe/dll files
 
-### <em>1</em>
+### <em>Resource Hacker</em>
 * Tool: [ResourceHacker.exe](/tools/forensics/ResHak)
 * Usage: extractor/compiler for windows binaries
 
-### <em>1</em>
+### <em>x32dbg</em>
 * Tool: [x32dbg.exe](/tools/forensics/x32dbg)
 * Usage: 32 bit debugger for windows
 
-### <em>1</em>
+### <em>x64dbg</em>
 * Tool: [x64dbg.exe](/tools/forensics/x64dbg)
 * Usage: 64 bit debugger for windows
 
