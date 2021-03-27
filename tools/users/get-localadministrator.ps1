@@ -1,21 +1,17 @@
 function Get-LocalAdministratorBuiltin {
-    <#
-    .SYNOPSIS
-        function to retrieve the local Administrator account
-    .DESCRIPTION
-        function to retrieve the local Administrator account
-    .PARAMETER ComputerName
-        Specifies the computername
-    .EXAMPLE
-        PS C:\> Get-LocalAdministratorBuiltin
-    .EXAMPLE
-        PS C:\> Get-LocalAdministratorBuiltin -ComputerName SERVER01
-    .NOTES
-        Francois-Xavier Cat
-        lazywinadmin.com
-        @lazywinadmin
-    #function to get the BUILTIN LocalAdministrator
-    #http://blog.simonw.se/powershell-find-builtin-local-administrator-account/
+<#
+.DESCRIPTION
+    run script to import function Get-LocalAdministratorBuiltin --> Get-LocalAdministratorBuiltin -ComputerName $Target to get the BUILTIN LocalAdministrator
+.PARAMETER ComputerName
+    Specifies the computername
+.EXAMPLE
+    PS C:\> Get-LocalAdministratorBuiltin -ComputerName SERVER01
+.NOTES
+    Originally written by:
+    Francois-Xavier Cat
+    lazywinadmin.com
+    @lazywinadmin
+#http://blog.simonw.se/powershell-find-builtin-local-administrator-account/
 #>
 
     [CmdletBinding()]

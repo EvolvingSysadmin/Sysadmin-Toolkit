@@ -1,1 +1,0 @@
-Connect-ExchangeOnline -UserPrincipalName ryanh@bcwirerope.com

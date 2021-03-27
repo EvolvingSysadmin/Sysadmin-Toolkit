@@ -1,7 +1,7 @@
 @echo off
 
 :: WinSysEnum.bat: Simple script provides available windows domain information.
-:: https://github.com/EvolvingSysadmin/Penetration-Testing 
+:: @ryanheavican.com
 :: https://ryanheavican.com/
 
 :start

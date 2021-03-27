@@ -1,7 +1,7 @@
 @echo off
 
 :: WinNetEnum.bat: Simple script provides available windows networking information.
-:: https://github.com/EvolvingSysadmin/Penetration-Testing 
+:: @ryanheavican.com
 :: https://ryanheavican.com/
 
 :start

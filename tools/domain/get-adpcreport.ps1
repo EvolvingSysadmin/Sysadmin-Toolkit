@@ -1,3 +1,14 @@
+<#
+.DESCRIPTION
+    Run this script to obtain the AD computer report "\ActiveDirectoryComputers.html" in the same directory as PS script 
+.PARAMETER Replace
+    N/A
+.EXAMPLE
+    PS get-adpcreport.ps1
+.NOTES
+    Find more @ryanheavican
+#>
+
 # This script retrieves all the computers listed in Active Directory and creates an html report.
 $reportPath = $PSScriptRoot + "\ActiveDirectoryComputers.html"
 # Grab list of computers in Active Directory

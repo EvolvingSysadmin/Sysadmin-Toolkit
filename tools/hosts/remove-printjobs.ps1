@@ -1,8 +1,19 @@
+<#
+.DESCRIPTION
+    Removes print jobs of specified host
+.PARAMETER Replace
+    Run script and input hostname or IP of target. Change comments to install burnt toast notifications if wanted
+.EXAMPLE
+    PS remove-printjobs.ps1
+.NOTES
+    Written by @ryanheavican
+#>
+
 # Install-Module -Name BurntToast # Installs optional notification module
 
 $ComputerName = Read-Host -Prompt 'Input remote computer hostname or IP address'
 
-# $ComputerName = "Evolve-DC" # Input remote computer name or IP address as variable
+# $ComputerName = "CONTOSO-PC" # Input remote computer name or IP address as variable
 
  $printers = Get-Printer -ComputerName $ComputerName
 foreach ($printer in $printers) {
