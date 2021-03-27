@@ -32,7 +32,7 @@ PowerShell scripts, PowerShell resources, and general Systems Administration too
 * Usage: run in same directory against servers.txt, execute, and view exported LocalUsers.csv
 
  ### <em>Get SID Info</em>
- * Tool: [get-sidinfo.ps1](/tools/users/getsidinfo.ps1)
+ * Tool: [get-sidinfo.ps1](/tools/users/get-sidinfo.ps1)
  * Usage: replace either username or SID variable and run selection in PowerShell ISE to obtain info
 
 ## Domain Administration
