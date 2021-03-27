@@ -257,8 +257,6 @@ Windows-Commands.csv
 
 ### Other
 * Mark Russinovich - Windows Internals, P1: [/docs/Mark-Russinovich-Windows-Internals-P1.pdf](/docs/Mark-Russinovich-Windows-Internals-P1.pdf)
-
 * Mark Russinovich - Windows Internals, P2: [/docs/Mark-Russinovich-WindowsInternals-P2.pdf](/docs/Mark-Russinovich-WindowsInternals-P2.pdf)
-
 * SANS PenTest Commands Poster: [/docs/SANS-PenTest-Commands-Poster.pdf.pdf](/docs/SANS-PenTest-Commands-Poster.pdf)
 
