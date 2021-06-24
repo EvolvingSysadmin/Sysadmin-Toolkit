@@ -68,6 +68,10 @@ PowerShell scripts, PowerShell resources, and general Systems Administration too
   * Tool: [enter-remotesessions.ps1](/tools/hosts/enter-remotesessions.ps1)
   * Usage: contains commands for remote administration, run portions of script individually
 
+### <em>Enunerate Program's Running on System</em>
+  * Tool: [get-programs.ps1](/tools/hosts/get-programs.ps1)
+  * Usage: contains commands to host's programs or print them to .txt
+
 ### <em>Test if Remote Desktop is Enabled</em>
  * Tool: [test-remotedesktop.ps1](/tools/hosts/test-remotedesktop.ps1)
  * Usage: run script to import function, use Test-RemoteDesktopIsEnabled -ComputerName $target

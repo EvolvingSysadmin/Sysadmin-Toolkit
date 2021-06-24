@@ -39,6 +39,8 @@ Search-Mailbox -Identity "$MAILBOX-BEING-SEARCHED" -SearchQuery "$SEARCH-STRING"
 
 # Search-Mailbox docs: https://docs.microsoft.com/en-us/powershell/module/exchange/search-mailbox
 
+Get-Mailbox email-address | fl
+
 # Disconnect
 
 Disconnect-ExchangeOnline

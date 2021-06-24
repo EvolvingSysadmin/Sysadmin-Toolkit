@@ -1,8 +1,24 @@
-# RUN ON REMOTE HOST OR RUN enable-remotedesktop.ps1 FROM CLIENT
+# Detailed PSRemoting Instructions
 
-Enable-PSRemoting
+# To find and set network profiles on either end
 
-# SIMPLE REMOTE SESSION FROM REMOTE HOSTNAME & PROMPT FOR CREDENTIAL
+Get-NetConnectionProfile
+Set-NetConnectionProfile -Name "NAME" -NetworkCategory Private
+
+# Enabling Remoting On Remote
+
+Set-Service winrm -Status Running -StartupType Automatic
+Enable-PSRemoting -Force
+
+# Verifying WinRM on Remote
+
+winrm.cmd
+winrm quickconfig
+
+# On Local Administrative Computer
+
+Set-Service winrm -Status Running -StartupType Automatic # Automatic if wanted
+Set-Item -Path WSMan:\localhost\Client\TrustedHosts -Value * or IP or HOSTNAME
 
 Enter-PSSession -computername {RemoteHostname or IP} -Credential (Get-Credential)
 

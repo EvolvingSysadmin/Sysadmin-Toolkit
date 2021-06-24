@@ -1,0 +1,5 @@
+Get-ADUser -Filter * | Format-Table SamAccountName -A
+Get-ADComputer -Filter * | Format-Table SamAccountName -A
+Get-PhysicalDisk | Get-StorageAdvancedProperty
+Get-StorageAdvancedProperty -PhysicalDisk (Get-PhysicalDisk)[0]
+https://www.dtonias.com/add-computers-trustedhosts-list-powershell/

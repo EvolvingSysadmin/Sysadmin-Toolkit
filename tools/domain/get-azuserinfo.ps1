@@ -12,4 +12,7 @@ Get-AzureADUser
 Get-AzureADUser -All $true
 Get-AzureADUser # -Filter "AccountEnabled eq false" or "AccountEnabled eq true"
 Get-AzureADUser # -Filter "startswith(displayName,'$UserName')"
-Get-Mailbox email-address | fl
+
+# Get global admins
+
+Get-AzureADDirectoryRole | where { $_.DisplayName -eq "Global Administrator" } | Get-AzureADDirectoryRoleMember | Ft DisplayName
