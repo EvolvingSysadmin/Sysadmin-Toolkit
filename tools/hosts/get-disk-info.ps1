@@ -1,0 +1,1 @@
+Get-PhysicalDisk | Get-StorageAdvancedProperty

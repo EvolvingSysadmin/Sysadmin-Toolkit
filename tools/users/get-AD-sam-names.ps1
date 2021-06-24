@@ -1,0 +1,1 @@
+Get-ADUser -Filter * | Format-Table SamAccountName -A

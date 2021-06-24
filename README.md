@@ -35,6 +35,10 @@ PowerShell scripts, PowerShell resources, and general Systems Administration too
  * Tool: [get-sidinfo.ps1](/tools/users/get-sidinfo.ps1)
  * Usage: replace either username or SID variable and run selection in PowerShell ISE to obtain info
 
+  ### <em>Get AD Sam Names</em>
+ * Tool: [get-AD-sam-names.ps1](/tools/users/get-AD-sam-names.ps1)
+ * Usage: commands for getting a simple list of domain user's sam names
+
 ## Domain Administration
 
 ### <em>Domain Info Batch Tool</em>
@@ -45,10 +49,13 @@ PowerShell scripts, PowerShell resources, and general Systems Administration too
  * Tool: [get-adpcreport.ps1](/tools/domain/get-adpcreport.ps1)
  * Usage: run to generate report in same directory
 
+ ### <em>Get AD Sam Computer Names</em>
+ * Tool: [get-adpcreport.ps1](/tools/domain/get-adpcreport.ps1)
+ * Usage: commands to get a simple list of AD Sam computer names
+
 ### <em>Exchange Online PowerShell Tools</em>
 * Tool: [exchangeonline-tools.ps1](/tools/domain/exchangeonline-tools.ps1)
 * Usage: run selections for online exchange administration
-
 
 ### <em>Get Azure User Info</em>
 * Tool: [get-azuserinfo.ps1](/tools/domain/get-azuserinfo.ps1)
@@ -56,17 +63,21 @@ PowerShell scripts, PowerShell resources, and general Systems Administration too
 
 ## Host Administration
 
+### <em>Remote Powershell Administration</em>
+  * Tool: [enter-remotesessions.ps1](/tools/hosts/enter-remotesessions.ps1)
+  * Usage: contains commands for remote administration, run portions of script individually
+
 ### <em>Copy File to VM</em>
  * Tool: [file-to-vm.ps1](/tools/hosts/file-to-vm.ps1)
  * Usage: run for options for obtaining computer info
 
-### <em>Enable Remote Desktop Remotely</em>
- * Tool: [enable-remotedesktop.ps1](/tools/hosts/enable-remotedesktop.ps1)
- * Usage: run script to import function, use Enable-RemoteDesktop -ComputerName $Computer or other parameter in synopsis of script
+### <em>Copy File Share to Different Server</em>
+ * Tool: [copy-file-share.ps1](/tools/hosts/copy-file-share.ps1)
+ * Usage: copie's file share to different share, to be run as a task at specific time
 
-### <em>Remote Powershell Administration</em>
-  * Tool: [enter-remotesessions.ps1](/tools/hosts/enter-remotesessions.ps1)
-  * Usage: contains commands for remote administration, run portions of script individually
+ ### <em>Get Password Policy</em>
+ * Tool: [get-password-policy.ps1](/tools/forensics/get-password-policy.ps1)
+ * Usage: get's AD password policy info
 
 ### <em>Enunerate Program's Running on System</em>
   * Tool: [get-programs.ps1](/tools/hosts/get-programs.ps1)
@@ -104,9 +115,17 @@ PowerShell scripts, PowerShell resources, and general Systems Administration too
 * Tool: [remove-printjobs.ps1](/tools/hosts/install-chrome.ps1)
 * Usage: run then input hostname or IP of target
 
-### Product Key Batch Script
+### <em>Product Key Batch Script</em>
 * Tool: [get-productkey.bat](/tools/hosts/get-productkey.bat)
 * Usage: run script in command, and follow prompt
+
+### <em>Get Disk Info</em>
+* Tool: [get-disk-info.ps1](/tools/hosts/get-disk-info.ps1)
+* Usage: run script in command, and follow prompt
+
+### <em>Add Items to Trusted Hosts File</em>
+* Tool: [add-trusted-host.ps1](/tools/hosts/add-trusted-host.ps1)
+* Usage: contains commands for adding to trusted hosts list
 
 ### <em>Simple Get Windows Product Key</em>
 * Usage: run in command prompt
