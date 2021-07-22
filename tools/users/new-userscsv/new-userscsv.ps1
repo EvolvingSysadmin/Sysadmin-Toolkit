@@ -15,7 +15,7 @@
 #>
 
 Import-Csv "C:\ADUsers.csv" | ForEach-Object {
-    $upn = $_.SamAccountName + "bcwirerope.com"
+    $upn = $_.SamAccountName + # samaccountname.com
     New-ADUser -Name $_.Name `
      -GivenName $_."GivenName" `
      -Surname $_."Surname" `
