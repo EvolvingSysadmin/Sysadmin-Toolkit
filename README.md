@@ -17,3 +17,7 @@ PowerShell and Batch scripting can save time for Windows Systems Administrators.
 ## Licensing
 
 - The scripts and information in this repository is offered for free through an [MIT License](./LICENSE).
+
+
+
+update metadata links in scripts and other metadata information

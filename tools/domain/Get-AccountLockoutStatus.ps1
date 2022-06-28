@@ -8,13 +8,13 @@ Function Get-AccountLockoutStatus {
  
 .NOTES   
     Name: Get-AccountLockoutStatus
-    Author: theSysadminChannel
+    Author: theSysadminChannel, modified by https://github.com/EvolvingSysadmin
     Version: 1.01
     DateCreated: 2017-Apr-09
     DateUpdated: 2017-Apr-09
  
 .LINK
-    https://github.com/EvolvingSysadmin/PowerShell/blob/main/scripts/Get-AccountLockoutStatus.ps1
+    https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/domain/Get-AccountLockoutStatus.ps1
  
 .PARAMETER ComputerName
     By default all domain controllers are checked. If a ComputerName is specified, it will check only that.
