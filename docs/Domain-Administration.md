@@ -1,18 +1,18 @@
 # Domain Administration
 
 ## Tools
-- [Account Lockout Events](#account-lockout-eventsm)
-- [Account Lockout Status](#account-lockout-status)
-- [Active Directory SAM Computer Names](#active-directory-sam-computer-names)
-- [Domain Computers HTML Report](#domain-computers-html-report)
-- [Domain Controller Roles](#domain-controller-roles)
+- [Get Account Lockout Events](#account-lockout-eventsm)
+- [Get Account Lockout Status](#account-lockout-status)
+- [Get Active Directory SAM Computer Names](#active-directory-sam-computer-names)
+- [Get Domain Computers HTML Report](#domain-computers-html-report)
+- [Get Domain Controller Roles](#domain-controller-roles)
 - [Domain Info Batch Tool](#domain-info-batch-tool)
-- [Domain Password Policy](#domain-password-policy)
-- [Domain Reports](#domain-reports)
-- [Domain UPNs](#domain-upns)
+- [Get Domain Password Policy](#domain-password-policy)
+- [Get Domain Reports](#domain-reports)
+- [Get Domain UPNs](#domain-upns)
 - [Exchange Online Tools](#exchange-online-tools)
-- [GPO Reports](#gpo-reports)
-- [Network Ping Sweep](#network-ping-sweep)
+- [Get GPO Reports](#gpo-reports)
+
 
 ## Account Lockout Events
 - Tool: [Get-AccountLockouts.ps1](/tools/domain/Get-AccountLockouts.ps1)
@@ -80,8 +80,4 @@
 - Use Case:
 - Usage: 
 
-## Network Ping Sweep
-- Script: [Get-PingResults.ps1](/tools/domain/Get-PingResults.ps1)
-- Description: Script to obtain all hosts that reply to ICMP ping requests of a specified subnet
-- Use Case:
-- Usage: 
+

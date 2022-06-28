@@ -1,12 +1,19 @@
 # Systems Administration Toolkit
 
-PowerShell scripts, PowerShell resources, and general Systems Administration tools.
+This repository contains PowerShell and Batch scripts for Windows Systems Administration.
 
-## TOC
+## Background
+
+PowerShell and Batch scripting can save time for Windows Systems Administrators. This repository contains PowerShell and Batch scripts that can be run on their own or incorporated into other programs. 
+
+## Topics
 - [Domain Administration](/docs/Domain-Administration.md)
 - [User Administration](/docs/User-Administration.md)
 - [Host Administration](/docs/Host-Administration.md)
 - [Network Enumeration](/docs/Network-Enumeration.md)
 - [Host Forensics](/docs/Host-Forensics.md)
-- [Resources](/docs/Resources.md))
+- [Resources](/docs/Resources.md)
 
+## Licensing
+
+- The scripts and information in this repository is offered for free through an [MIT License](./LICENSE).
