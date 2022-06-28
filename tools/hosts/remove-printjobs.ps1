@@ -1,12 +1,14 @@
-<#
-.DESCRIPTION
+﻿<#
+.SYNOPSIS
     Removes print jobs of specified host
-.PARAMETER Replace
-    Run script and input hostname or IP of target. Change comments to install burnt toast notifications if wanted
 .EXAMPLE
-    PS remove-printjobs.ps1
+    PS C:\> Remove-PrintJobs.ps1
+.LINK
+    https://github.com/EvolvingSysadmin/PowerShell/blob/main/scripts/Remove-PrintJobs.ps1 
 .NOTES
-    Written by @ryanheavican
+    Written by https://github.com/EvolvingSysadmin
+    MIT License
+    Run script and input hostname or IP of target. Change comments to install burnt toast notifications if wanted
 #>
 
 # Install-Module -Name BurntToast # Installs optional notification module

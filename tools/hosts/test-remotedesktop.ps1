@@ -1,22 +1,14 @@
-function Test-RemoteDesktopIsEnabled {
-    <#
+function Test-RemoteDesktop {
+<#
 .SYNOPSIS
   Function to check if RDP is enabled
-.DESCRIPTION
-  Function to check if RDP is enabled
 .EXAMPLE
-  Test-RemoteDesktopIsEnabled
-  Test if Remote Desktop is enabled on the current machine
-.EXAMPLE
-  Test-RemoteDesktopIsEnabled -ComputerName SERVER01,SERVER02
-  Test if Remote Desktop is enabled on the remote machine SERVER01 and SERVER02
+   PS C:\> Test-RemoteDesktopIsEnabled -ComputerName SERVER01,SERVER02
+.LINK
+    https://github.com/EvolvingSysadmin/PowerShell/blob/main/scripts/Test-RemoteDesktop.PS1
 .NOTES
-    Francois-Xavier Cat
-    @lazywinadmin
-    lazywinadmin.com
-    github.com/lazywinadmin
+    Written by https://github.com/lazywinadmin
 #>
-
 
     PARAM(
         [String[]]$ComputerName = $env:COMPUTERNAME
