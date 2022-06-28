@@ -1,3 +1,0 @@
-# TODO
-
-* [ ] GPO Administration Scripts 

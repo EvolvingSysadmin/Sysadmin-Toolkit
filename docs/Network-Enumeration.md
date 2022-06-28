@@ -1,15 +1,16 @@
 # Network Enumeration
 
 ## Tools
-[Get LAN Scan](#get-lan-scan)
-[Get Local Bandwidth](#get-local-bandwidth)
-[Get TCP and UDP Activity](#get-tcp-and-udp-activity)
-[Get Wireless Network Info](#get-wireless-network-info)
-[Invoke Ping in Parallel](#invoke-ping-in-parallel)
-[Network Info Batch Script](#network-info-batch-script)
-[Port Scanning Options with PowerShell](#port-scanning-options-with-powershell)
-[Single Host TCP Port Scan](#single-host-tcp-port-scan)
-[Traceroute Verbose](#traceroute-verbose)
+- [Get LAN Scan](#get-lan-scan)
+- [Get Local Bandwidth](#get-local-bandwidth)
+- [Get TCP and UDP Activity](#get-tcp-and-udp-activity)
+- [Get Wireless Network Info](#get-wireless-network-info)
+- [Invoke Ping in Parallel](#invoke-ping-in-parallel)
+- [Network Info Batch Script](#network-info-batch-script)
+- [Port Scanning Options with PowerShell](#port-scanning-options-with-powershell)
+- [Single Host TCP Port Scan](#single-host-tcp-port-scan)
+- [Traceroute Verbose](#traceroute-verbose)
+- [Network Ping Sweep](#network-ping-sweep)
 
 ## Get LAN Scan
 - Tool: [Get-LANScan.ps1](/tools/network/Get-LANScan.ps1)
@@ -68,7 +69,11 @@ netstat -naob 1 | find "<IPADDR or PORT>"
 - Use Case: 
 - Usage: run script and input IP to trace to
 
-
+## Network Ping Sweep
+- Script: [Get-PingResults.ps1](/tools/domain/Get-PingResults.ps1)
+- Description: Script to obtain all hosts that reply to ICMP ping requests of a specified subnet
+- Use Case:
+- Usage: 
 
 
 
