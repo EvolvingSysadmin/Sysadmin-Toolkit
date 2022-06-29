@@ -3,7 +3,7 @@
 This page contains tools for Windows domain administration.
 
 ## Tools
-- [Get Account Lockout Status](#account-lockout-status)
+- [Get Account Lockout Status](#get-account-lockout-status)
 - [Get Active Directory SAM Computer Names](#active-directory-sam-computer-names)
 - [Get Domain Computers HTML Report](#domain-computers-html-report)
 - [Get Domain Controller Roles](#domain-controller-roles)
@@ -28,7 +28,7 @@ This page contains tools for Windows domain administration.
   - Command: `PS C:\> Get-AccountLockoutStatus -Computername DC01 -Username John -DaysFromToday 10`
   - Result: will display lockout events from DC01 for username John for the past 10 days
 
-## Domain Computers HTML Report
+## Get Domain Computers HTML Report
  - Tool: [get-adpcreport.ps1](/tools/domain/Get-ADPCReport.ps1)
  - Description: 
  - Use Case: 
