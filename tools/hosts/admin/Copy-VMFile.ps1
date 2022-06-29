@@ -12,3 +12,7 @@
     Enable-VMIntegrationService -VMName “TestVM” -Name “Guest Service Interface”
     Written by @ryanheavican
 #>
+
+$Source = Read-Host 'What is the path of the file being copied?'
+$Destination = Read-Host 'What is the destination path in the VM?'
+Copy-VMFile -SourcePath $Source -DestinationPath $Destination -CreateFullPath -FileSource Host

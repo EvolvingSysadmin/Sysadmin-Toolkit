@@ -4,6 +4,8 @@ function Enable-RemoteDesktop {
         The function Enable-RemoteDesktop will enable RemoteDesktop on a local or remote machine.
     .DESCRIPTION
         The function Enable-RemoteDesktop will enable RemoteDesktop on a local or remote machine.
+    .LINK
+        https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/hosts/admin/Enable-RemoteDesktop.ps1    
     .PARAMETER ComputerName
         Specifies the computername
     .PARAMETER Credential
@@ -23,8 +25,6 @@ function Enable-RemoteDesktop {
         @lazywinadmin
         lazywinadmin.com
         github.com/lazywinadmin
-    .LINK
-        https://github.com/lazywinadmin/PowerShell
 #>
     #Requires -RunAsAdministrator
     [CmdletBinding(DefaultParameterSetName = 'CimSession',

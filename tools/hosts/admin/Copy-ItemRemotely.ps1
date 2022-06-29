@@ -1,13 +1,12 @@
 ﻿<#
-.SYNOPSIS
+.DESCRIPTION
 	Script to copy items to a remote host
 .EXAMPLE
-	PS C:\> ./Get-SystemInfo.ps1
+	PS C:\> .\Copy-ItemRemotely.ps1
 .LINK
-	https://github.com/EvolvingSysadmin/PowerShell/blob/main/scripts/Copy-ItemRemotely.ps1
+	https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/hosts/admin/Copy-ItemRemotely.ps1
 .NOTES
 	Written by https://github.com/EvolvingSysadmin
-    MIT License
 #>
 
 $ComputerName = Read-Host 'Input the IP of the destination'

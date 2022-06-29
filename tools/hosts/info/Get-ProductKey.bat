@@ -1,8 +1,10 @@
 @echo off
 
-:: WinSysEnum.bat: Simple script provides available windows systems information.
-:: https://github.com/EvolvingSysadmin/
-:: https://ryanheavican.com/
+:: DESCRIPTION: batch script that provides Windows product key information. The script also enables users to deactivate the current Windows product key.
+:: LINK: https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/hosts/info/Get-ProductKey.bat
+:: NOTES: written by https://github.com/EvolvingSysadmin
+:: EXAMPLE: C:\> .\Get-ProductKey.bat
+
 
 :start
 SET var=0

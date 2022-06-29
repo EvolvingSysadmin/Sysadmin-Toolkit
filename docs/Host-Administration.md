@@ -1,213 +1,183 @@
 # Host Administration
 
-This page contains PowerShell and Batch tools for Windows host administration. These tools are organized by host information gathering and host task administration.
+This page contains PowerShell, Batch, and Visual Basic tools for Windows host administration. These tools are organized by host information gathering and host task administration.
 
 ## Host Information Gathering Tools
-[Add Items to Trusted Hosts](#add-items-to-trusted-hosts)
-[Basic OS & Hardware Report](#basic-os--hardware-report)
-[Computer Info to JSON](#computer-info-to-json)
-[Copy File Share to Different Server](#copy-file-share-to-different-server)
-[Copy File Remotely](#copy-file-remotely)
-[Copy File to VM](#copy-file-to-vm)
-[Enable Remote Desktop](#enable-remote-desktop)
-[Export Process Start Info to txt](#export-process-start-info-to-txt)
-[Get Basic Process Info](#get-basic-process-info)
-[Get Computer Info](#get-computer-info)
-[Get Disk Info](#get-disk-info)
-[Get Last Boot Time](#get-last-boot-time)
-[Get List of Services Inside Each Process](#get-list-of-services-inside-each-process)
-[Get Password Policy](#get-password-policy)
-[Get Public IP Address](#get-public-ip-address)
-[Get Running Process Attributes](#get-running-process-attributes)
-[Get System Info](#get-system-info)
-[Get System Programs](#get-system-programs)
-[Get Windows Product Key](#get-windows-product-key)
-[New Mapped Drive](#new-mapped-drive)
-[Product Key Batch Script](#product-key-batch-script)
-[PSSession Configuration](#pssession-configuration)
-[Remote Powershell Administration](#remote-powershell-administration)
-[Remove Print Jobs](#remove-print-jobs)
-[Silently Install Chrome](#silently-install-chrome)
-[Test Remote Desktop](#test-remote-desktop)
-[Windows Enumeration Batch Script](#windows-enumeration-batch-script)
-[Windows Enumeration PowerShell Script](#windows-enumeration-powershell-script)
+- [Get-ComputerInfo.ps1](#get-computer-info)
+- [Get-LastBoot.ps1](#get-last-boot-time)
+- [Get-PasswordPolicy.ps1](#get-password-policy)
+- [Get-ProcessInfo.ps1](#get-basic-process-info)
+- [Get-ProcessTime.vbs](#export-process-start-info-to-txt)
+- [Get-ProductKey.bat](#get-windows-product-key)
+- [Get-Programs.ps1](#get-system-programs)
+- [Get-RestartEvents.ps1](#get-restart-events)
+- [Get-SystemInfo.ps1](#get-system-info)
+- [WindowsEnum.ps1](#windows-enumeration-powershell-script)
+- [WinSysEnum.bat](#windows-enumeration-batch-script)
 
-## Add Items to Trusted Hosts
-- Tool: [Add-TrustedHost.ps1](/tools/hosts/Add-TrustedHost.ps1)
-- Description: 
-- Use Case: 
-- Usage: contains commands for adding to trusted hosts list
-
-## Basic OS & Hardware Report
-- Tool: [Get-ComputerReport.ps1](/tools/hosts/Get-ComputerReport.ps1)
-- Description: 
-- Use Case: 
-- Usage: run script to import function Get-ComputerInfo --> Get-ComputerInfo -ComputerName $Target
-
-## Computer Info to JSON
-- Tool: [Get-SystemInfo.ps1](/scripts/Get-SystemInfo.ps1)
-- Description: Lists system information of the local computer in JSON
-- Use Case: 
-- Usage: 
-
-## Copy File Share to Different Server
-- Tool: [Copy-FileShare.ps1](/tools/hosts/Copy-FileShare.ps1)
-- Description: 
-- Use Case: 
-- Usage: copie's file share to different share, to be run as a task at specific time
-
-## Copy File Remotely
-- Tool: [Copy-ItemRemotely.ps1](/tools/hosts/Copy-ItemRemotely.ps1)
-- Description: 
-- Use Case: 
-- Usage: 
-
-## Copy File to VM
-- Tool: [Copy-VMFile.ps1](/tools/hosts/Copy-VMFile.ps1)
-- Description: 
-- Use Case: 
-- Usage: run for options for obtaining computer info
-
-## Enable Remote Desktop
-- Tool: [Enable-RemoteDesktop.ps1](/tools/hosts/Enable-RemoteDesktop.ps1)
-- Description: 
-- Use Case:
-- Usage: 
-
-## Export Process Start Info to txt
-- Tool: [Get-ProcessTime.vbs](/tools/hosts/Get-ProcessTime.vbs)
-- Description: 
-- Use Case: 
-- Usage: run to get txt with basic process info in same directory
-
-## Get Basic Process Info
-- Tool: [Get-ProcessInfo.ps1](/tools/hosts/Get-ProcessInfo.ps1)
-- Description: 
-- Use Case: 
-- Usage: run specific commands within script
+## Host Task Administration Tools
+- [Add-TrustedHost.ps1](#add-items-to-trusted-hosts)
+- [Copy-FileShare.ps1](#copy-file-share-to-different-server)
+- [Copy-ItemRemotely.ps1](#copy-file-remotely)
+- [Copy-VMFile.ps1](#copy-file-to-vm)
+- [Enable-RemoteDesktop.ps1](#enable-remote-desktop)
+- [Enter-RemoteSessions.ps1](
+- [Install-Chrome.ps1]()
+- [New-MappedDrive.ps1]()
+- [PSSession-Configuration.ps1]()
+- [Remove-PrintJobs.ps1]()
+- [Test-RemoteDesktop.ps1]()
 
 ## Get Computer Info
-- Tool: [Get-ComputerInfo.ps1](/tools/hosts/Get-ComputerInfo.ps1)
-- Description: Function to query basic Operating System and Hardware Information from a local or remote machine
-- Use Case: 
-- Usage: 
-
-## Get Disk Info
-- Tool: [Get-DiskInfo.ps1](/tools/hosts/Get-DiskInfo.ps1)
-- Description: 
-- Use Case: 
-- Usage: run script in command, and follow prompt
+- Tool: [Get-ComputerInfo.ps1](/tools/hosts/info/Get-ComputerInfo.ps1)
+- Description: PowerShell function to query operating system and hardware information from a local or remote host
+- Use Case: use this function to obtain host information
+- Usage: import the function into PowerShell by running `PS C:\> .\Get-ComputerInfo.ps1`
+  - Command: `PS C:\> Get-ComputerInfo -ComputerName SERVER01`
+  - Result: SERVER01 system properties such as computer name, operating system name/version, memory, processers, sockets and more will be returned to the console. The -ComputerName argument is optional. System information of the local host wil be returned if no remote computer is defined using the -ComputerName argument.
 
 ## Get Last Boot Time
-- Script: [Get-LastBootTime.ps1](/tools/hosts/Get-LastBootTime.ps1)
-- Description: Prints the last boot time of the local host to the console
-- Use Case: 
-- Usage: 
-
-## Get List of Services Inside Each Process
-- Tool: 
-- Description: 
-- Use Case: 
-- Usage: run in command prompt
-```
-tasklist /svc
-```
+ - Tool: [Get-LastBoot.ps1](/tools/hosts/info/Get-LastBoot.ps1)
+ - Description: PowerShell commands to get either local or remote machine last boot time information
+ - Use Case: run these commands on a local machine or with a remote target if last boot time information is needed
+ - Usage: Run first command to obtain last boot time of the current machine. Define the target in the $Target variable and run the second command to obtain the last boot time of a remote host
 
 ## Get Password Policy
-- Tool: [Get-PasswordPolicy.ps1](/tools/hosts/Get-PasswordPolicy.ps1)
-- Description: 
-- Use Case: 
-- Usage: get's AD password policy info
+- Tool: [Get-PasswordPolicy.ps1](/tools/hosts/info/Get-PasswordPolicy.ps1)
+- Description: PowerShell commands to obtain domain password policy information
+- Use Case: run these commands to obtain password information for the domain environment
+- Usage: run the individual PowerShell commands to obtain the needed password policy information
 
-## Get Public IP Address
-- Tool: 
-- Description: 
-- Use Case: 
-- Usage: run in command prompt
-```
-curl -4 icanhazip.com
-```
+## Get Basic Process Info
+- Tool: [Get-ProcessInfo.ps1](/tools/hosts/info/Get-ProcessInfo.ps1)
+- Description: individual PowerShell commands to obtain processes running on a host
+- Use Case: un individual commands to obtain all processes, get a single process, or export all processes to CSV
+- Usage: run specific commands within script
 
-## Get Running Process Attributes 
-- Tool: 
-- Description: 
-- Use Case: 
-- Usage: run in command prompt
-``` 
-wmic process list full
-```
-
-## Get System Info
-- Tool: [Get-SystemInfo.ps1](/tools/hosts/Get-SystemInfo.ps1)
-- Description: 
-- Use Case: 
+## Export Process Start Info to txt
+- Tool: [Get-ProcessTime.vbs](/tools/hosts/info/Get-ProcessTime.vbs)
+- Description: Visual Basic script that generates a txt file with process time information in the same directory where it is run
+- Use Case: run this script to onbtain process information for a given host
 - Usage: 
-
-## Get System Programs
-- Script: [Get-Programs.ps1](/tools/hosts/Get-Programs.ps1)
-- Description: Script to show installed 32 and 64 bit programs or print to .txt
-- Use Case: 
-- Usage: 
-
-## Get Windows Product Key
-- Tool: 
-- Description: 
-- Use Case: 
-- Usage: run in command prompt
-```
-wmic path SoftwareLicensingService get OA3xOriginalProductKey
-```
-
-## PSSession Configuration
-- Tool: [PSSession-Configuration.ps1](/tools/hosts/PSSession-Configuration.ps1)
-- Description: 
-- Use Case: 
-- Usage: 
-
-## New Mapped Drive
-- Tool: [New-MappedDrive.ps1](/tools/hosts/New-MappedDrive.ps1)
-- Description: 
-- Use Case: 
-- Usage: 
+  - Command: `C:\> .\Get-ProcessTime.vbs`
+  - Result: a file called `ProcessList.txt` will be generated in the same directory where the script is run
 
 ## Product Key Batch Script
-- Tool: [Get-ProductKey.bat](/tools/hosts/Get-ProductKey.bat)
-- Description: 
-- Use Case: 
-- Usage: run script in command, and follow prompt
+- Tool: [Get-ProductKey.bat](/tools/hosts/info/Get-ProductKey.bat)
+- Description: batch script that provides Windows product key information. The script also enables users to deactivate the current Windows product key.
+- Use Case: run this script to obtain Windows product key information or to deactivate the Windows product key on the local host
+- Usage: run `C:\> .\Get-ProductKey.bat` and follow the prompt to either obtain or deactivate the Windows product key of the local host
 
-## Remote Powershell Administration
-- Tool: [Enter-RemoteSessions.ps1](/tools/hosts/Enter-RemoteSessions.ps1)
-- Description: 
-- Use Case: 
-- Usage: contains commands for remote administration, run portions of script individually
+## Get System Programs
+- Script: [Get-Programs.ps1](/tools/hosts/info/Get-Programs.ps1)
+- Description: PowerShell script that displays all installed 32 and 64 programs on the local host
+- Use Case: run this script to obtain a list of programs on the local host
+- Usage: 
+  - Command: `PS C:\> .\Get-Programs.ps1`
+  - Result: console will return a list of 32 and 64 bit programs
 
-## Remove Print Jobs
-- Tool: [Remove-PrintJobs.ps1](/tools/hosts/Remove-PrintJobs.ps1)
-- Description: 
-- Use Case: 
-- Usage: run then input hostname or IP of target
+ ## Get Restart Events
+- Tool: [Get-RestartEvents.ps1](/tools/hosts/info/Get-RestartEvents.ps1)
+- Description: PowerShell script to determine the last reboot time from a list of hosts in a txt file.
+- Use Case: use this script to find restart events for a list of hosts
+- Usage: 
+  - Command: input hosts into .\Servers.txt relative path and run script to get restart events of those hosts and run `PS C:\> .\Get-RestartEvents.ps1`
+  - Result: the script will return the server name, Time when the event got created, event ID, event severity and the message which contains user name who initiated the reboot 
 
-## Silently Install Chrome
-- Tool: [Install-Chrome.ps1](/tools/hosts/Install-Chrome.ps1)
-- Description: 
-- Use Case: 
-- Usage: run locally to silently install Chrome on host
-
-## Test Remote Desktop
-- Tool: [Test-RemoteDesktop.ps1](/tools/hosts/Test-RemoteDesktop.ps1)
-- Description: 
-- Use Case: 
-- Usage: run script to import function, use Test-RemoteDesktopIsEnabled -ComputerName $target
-
-## Windows Enumeration Batch Script 
-- Tool: [WinSysEnum.bat](/tools/hosts/WinSysEnum.bat)
-- Description: 
-- Use Case: 
-- Usage: run for options for obtaining computer info
+## Get System Info
+- Tool: [Get-SystemInfo.ps1](/tools/hosts/info/Get-SystemInfo.ps1)
+- Description: PowerShell script that lists operating system and hardware of the local host in JSON format
+- Use Case: run script to obtain localhost system information in JSON
+- Usage: 
+  - Command: `PS C:\> .\Get-SystemInfo.ps1`
+  - Result: the script will return operating system and hardware information in JSON format
 
 ## Windows Enumeration PowerShell Script 
-- Tool: [WindowsEnum.ps1](/tools/hosts/WindowsEnum.ps1)
-- Description: 
-- Use Case: 
-- Usage: turn off script execution policy and run (Set-Execution -ExecutionPolicy Unrestricted)
+- Tool: [WindowsEnum.ps1](/tools/hosts/info/WindowsEnum.ps1)
+- Description: PowerShell script to enumerate system information of the local host and export that information to txt files
+- Use Case: run this script when operating system, networking, hardware, user, and file information is needed for a localhost
+- Usage: 
+  - Command: `powershell -nologo -executionpolicy bypass -file WindowsEnum.ps1`
+  - Result: exports txt files containing system information to: `C:\temp\`
+
+## Windows Enumeration Batch Script 
+- Tool: [WinSysEnum.bat](/tools/hosts/info/WinSysEnum.bat)
+- Description: batch script for obtaining systems information of the local host
+- Use Case: use this script to obtain hardware, services, patch, and application data of the local host
+- Usage: run `C:\> .\WinSysEnum.bat` and follow the prompt to obtain the needed system information
+
+## Add Items to Trusted Hosts
+- Tool: [Add-TrustedHost.ps1](/tools/hosts/admin/Add-TrustedHost.ps1)
+- Description: individual PowerShell commands for adding a host to the trusted hosts file of a Windows host
+- Use Case: run these commands to add a remote hosts to the local trusted hosts list
+- Usage: set the `$RemoteHost` variable with the host to be added to the trusted host list and run the individual commands
+
+## Copy File Share to Different Server
+- Tool: [Copy-FileShare.ps1](/tools/hosts/admin/Copy-FileShare.ps1)
+- Description: PowerShell script for copying an SMB file share to another Windows file server
+- Use Case: use this script if a file share needs to be copied to a different host
+- Usage: 
+  - Command: `PS C:\> .\Copy-FileShare.ps1`
+  - Result: the script will prompt for the path of the file share and the destination the file share should be copied to. The file share and all items in it will be copied to the specified destination
+
+## Copy File Remotely
+- Tool: [Copy-ItemRemotely.ps1](/tools/hosts/admin/Copy-ItemRemotely.ps1)
+- Description: PowerShell script for copying an item to a remote host
+- Use Case: run the script to copy an item to a remote host using PowerShell
+- Usage: 
+  - Command: `PS C:\> .\Copy-ItemRemotely.ps1`
+  - Result: the script will prompt for the file path, destination and authorized user and will then copy the file
+
+## Copy File to VM
+- Tool: [Copy-VMFile.ps1](/tools/hosts/admin/Copy-VMFile.ps1)
+- Description: PowerShell script for copying files from a local host to a Virtual Machine
+- Use Case: run this script to use PowerShell to copy a file to a Virtual Machine
+- Usage: 
+  - Command: `PS C:\> .\Copy-VMFile.ps1`
+  - Result: the script will prompt for the file path and the destination path in the VM and will copy the file to the VM
+
+## Enable Remote Desktop
+- Tool: [Enable-RemoteDesktop.ps1](/tools/hosts/admin/Enable-RemoteDesktop.ps1)
+- Description: function that enables RemoteDesktop on a local or remote host
+- Use Case: use this function to enable remote desktop on a local or remote host
+- Usage: run `PS C:\> .\Enable-RemoteDesktop.ps1` to importy the function into PowerShell
+  - Command: `PS C:\> Enable-RemoteDesktop -ComputerName DC01 -Credential (Get-Credential -cred "CONTOSO\Admin")`
+  - Result: the script with enable remote desktop on DC01. The `-ComputerName` parameter specifies the host where RemoteDesktop should be enabled and the `-Credential` parameter specifies the the credentials of the authorized user
+
+## PSSession Administration
+- Tool: [PSSession-Configuration.ps1](/tools/hosts/admin/PSSession-Configuration.ps1)
+- Description: contains PowerShell PSRemoting commands for entering into a PSSession on a remote host
+- Use Case: use these commands when a remote PowerShell session needs to be configured on a remote host
+- Usage: run individual commands within the file
+
+## Install Chrome
+- Tool: [Install-Chrome.ps1](/tools/hosts/admin/Install-Chrome.ps1)
+- Description: silently installs latest version of Google Chrome on the local host
+- Use Case: run this script to install the Chrome web browser on the local host
+- Usage: 
+  - Command: `PS C:\> .\Install-Chrome.ps1`
+  - Result: installs Chrome in the background on the local host
+
+## New Mapped Drive
+- Tool: [New-MappedDrive.ps1](/tools/hosts/admin/New-MappedDrive.ps1)
+- Description: creates a persistent local drive mapped to a network location
+- Use Case: run this script to map a local drive to a network location using PowerShell
+- Usage: 
+  - Command: `PS C:\> ./New-MappedDrive.ps1`
+  - Result: maps a local drive to a network location
+
+## Remove Print Jobs
+- Tool: [Remove-PrintJobs.ps1](/tools/hosts/admin/Remove-PrintJobs.ps1)
+- Description: removes print jobs of the specified host
+- Use Case: run this script to remove print jobs from a local or remote host using PowerShell
+- Usage:
+  - Command: `PS C:\> .\Remove-PrintJobs.ps1`
+  - Result: script will prompt for host with print jobs and will remove print jobs from that host
+
+## Test Remote Desktop
+- Tool: [Test-RemoteDesktop.ps1](/tools/hosts/admin/Test-RemoteDesktop.ps1)
+- Description: PowerShell function to test if Remote Desktop Protocol is enabled on a remote host
+- Use Case: use this script to test if Remote Desktop is enabled on a remote host
+- Usage:
+  - Command: `PS C:\> Test-RemoteDesktop -ComputerName SERVER01,SERVER02`
+  - Result: will test whether Remote Desktop is enabled on hosts `SERVER01` and `SERVER02`

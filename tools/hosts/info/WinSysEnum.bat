@@ -1,8 +1,9 @@
 @echo off
 
-:: WinSysEnum.bat: Simple script provides available windows systems information.
-:: https://github.com/EvolvingSysadmin/Penetration-Testing 
-:: https://ryanheavican.com/
+:: DESCRIPTION: simple batch script provides available windows systems information
+:: LINK: https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/hosts/info/WinSysEnum.bat
+:: NOTES: written by https://github.com/EvolvingSysadmin
+:: EXAMPLE: C:\> .\WinSysEnum.bat
 
 :start
 SET var=0

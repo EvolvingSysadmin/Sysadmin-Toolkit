@@ -1,6 +1,6 @@
 # Systems Administration Toolkit
 
-This repository contains PowerShell and Batch scripts for Windows Systems Administration.
+This repository contains PowerShell, Batch, and Visual Basic scripts for Windows Systems Administration.
 
 ## Background
 

@@ -2,6 +2,8 @@
 .DESCRIPTION
     Script to find out last reboot event from list of servers in servers.txt, which needs a relative path, it searchesin System Events on servers and looks for event id 1074
     Prints ServerName, Time when the Event got created, Event ID, Event Severity and the message which contains user name who initiated the reboot 
+.LINK
+    https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/hosts/info/Get-RestartEvents.ps1
 .PARAMETER
     To get the output in CSV file just replace "|Out-Gridview" at the fourth last line with "| Export-Csv -NoTypeInformation ServerRebootEvents.csv": 
 .NOTES

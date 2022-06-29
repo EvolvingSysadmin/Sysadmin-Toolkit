@@ -5,10 +5,12 @@ Start-Service -Name WinRM
 Get-ChildItem -Path WSMan:\localhost\Client\TrustedHosts
 
 # Add item to TruestedHosts
-Set-Item -Path WSMan:\localhost\Client\TrustedHosts -Value 192.168.1.1 -Force  
+
+$RemoteHost = ""
+Set-Item -Path WSMan:\localhost\Client\TrustedHosts -Value $RemoteHost -Force  
 
 # Add  items to existing TrustedHosts list
-Set-Item -Path WSMan:\localhost\Client\TrustedHosts -Value storage2 -Concatenate -Force 
+Set-Item -Path WSMan:\localhost\Client\TrustedHosts -Value $RemoteHost -Concatenate -Force 
 
 # To revert and clear TrustedHosts list
 Clear-Item -Path WSMan:\localhost\Client\TrustedHosts -Force  

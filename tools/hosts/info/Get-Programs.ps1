@@ -4,10 +4,9 @@
 .EXAMPLE
     PS C:\> .\Get-Programs.ps1
 .LINK
-    https://github.com/EvolvingSysadmin/PowerShell/blob/main/scripts/Get-Programs.ps1
+    https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/hosts/info/Get-Programs.ps1
 .NOTES
     Written by https://codeandkeep.com/Get-List-of-Installed-Applications/ and modified by https://github.com/EvolvingSysadmin
-    MIT License
     After running, WMIC can then be used to uninstall program:
         wmic
         product get name

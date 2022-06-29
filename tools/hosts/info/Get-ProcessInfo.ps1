@@ -1,3 +1,14 @@
+<#
+.DESCRIPTION
+    Individual PowerShell commands to obtain processes running on a host.
+.LINK
+    https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/hosts/info/Get-ProcessInfo.ps1
+.NOTES
+    Written by https://github.com/EvolvingSysadmin
+.EXAMPLE
+    Run individual commands to obtain all processes, get a single process, or export all processes to CSV.
+#>
+
 # CAN USE A SPECIFIC PROCESS NAME AS WELL
 
 Get-Process * -ComputerName localhost, Server01, Server02 |

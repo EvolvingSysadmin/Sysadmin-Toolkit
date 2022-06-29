@@ -1,21 +1,17 @@
 ﻿<#
-.SYNOPSIS
+.DESCRIPTION
     Removes print jobs of specified host
-.EXAMPLE
-    PS C:\> Remove-PrintJobs.ps1
 .LINK
-    https://github.com/EvolvingSysadmin/PowerShell/blob/main/scripts/Remove-PrintJobs.ps1 
+    https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/hosts/admin/Remove-PrintJobs.ps1
 .NOTES
     Written by https://github.com/EvolvingSysadmin
-    MIT License
-    Run script and input hostname or IP of target. Change comments to install burnt toast notifications if wanted
+    Run script and input hostname or IP of target
+.EXAMPLE
+    PS C:\> .\Remove-PrintJobs.ps1
 #>
-
-# Install-Module -Name BurntToast # Installs optional notification module
 
 $ComputerName = Read-Host -Prompt 'Input remote computer hostname or IP address'
 
-# $ComputerName = "CONTOSO-PC" # Input remote computer name or IP address as variable
 
  $printers = Get-Printer -ComputerName $ComputerName
 foreach ($printer in $printers) {
@@ -25,9 +21,6 @@ foreach ($printer in $printers) {
     }
 }
 
-# New-BurntToastNotification -Text "All print jobs removed" -AppLogo $null -Silent #notification
-
 ####### To verify that print jobs have been removed
-
 # Get-Printer -ComputerName
 # Get-PrintJob -ComputerName -PrinterName

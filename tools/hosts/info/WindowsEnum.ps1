@@ -1,14 +1,19 @@
-﻿# Usage
-# run script directly from powershell for quick standard checks
-# 
-# For quick standard checks directly from CMD:
-# powershell -nologo -executionpolicy bypass -file WindowsEnum.ps1
-#
-# To run extensive file searches use extended parameter (it can take a long time, be patient!):
-# PS C:\> .\WindowsEnum.ps1 extended
-# From CMD:
-# powershell -nologo -executionpolicy bypass -file WindowsEnum.ps1 extended
+﻿<#
+.DESCRIPTION
+    PowerShell script to enumerate system information of the local host.
+.LINK
+    https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/hosts/info/WindowsEnum.ps1
+.NOTES
+    Modified by https://github.com/EvolvingSysadmin
+.EXAMPLE
+    Run script directly from powershell for quick standard checks
 
+    For quick standard checks directly from CMD: powershell -nologo -executionpolicy bypass -file WindowsEnum.ps1
+
+    To run extensive file searches use extended parameter (it can take a long time, be patient!): PS C:\> .\WindowsEnum.ps1 extended
+
+    From CMD: powershell -nologo -executionpolicy bypass -file WindowsEnum.ps1 extended
+#>
 
 param($extended)
  

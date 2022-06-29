@@ -2,12 +2,11 @@
 .SYNOPSIS
 	Lists system information of the local computer in JSON
 .EXAMPLE
-	PS C:\> ./Get-SystemInfo.ps1
+	PS C:\> .\Get-SystemInfo.ps1
 .LINK
-	https://github.com/EvolvingSysadmin/PowerShell/blob/main/scripts/Get-SystemInfo.ps1
+	https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/hosts/info/Get-SystemInfo.ps1
 .NOTES
 	Author: Markus Fleschutz & modified by https://github.com/EvolvingSysadmin 
-    MIT License
 #>
 
 # RAM

@@ -4,14 +4,13 @@
 .SYNOPSIS
    This function query some basic Operating System and Hardware Information from a local or remote machine
 .DESCRIPTION
-   This function query some basic Operating System and Hardware Information from
-   a local or remote machine.
-   The properties returned are the Computer Name (ComputerName),the Operating
-   System Name (OSName), Operating System Version (OSVersion), Memory Installed
-   on the Computer in GigaBytes (MemoryGB), the Number of
-   Processor(s) (NumberOfProcessors), Number of Socket(s) (NumberOfSockets),
-   and Number of Core(s) (NumberOfCores).
+   This function query some basic Operating System and Hardware Information from a local or remote machine.
+
+   The properties returned are the Computer Name (ComputerName),the Operating System Name (OSName), Operating System Version (OSVersion), Memory Installed on the Computer in GigaBytes (MemoryGB), the Number of Processor(s) (NumberOfProcessors), Number of Socket(s) (NumberOfSockets), and Number of Core(s) (NumberOfCores).
+   
    This function as been tested against Windows Server 2000, 2003, 2008 and 2012
+.LINK
+   https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/hosts/info/Get-ComputerInfo.ps1
 .PARAMETER ComputerName
    Specify a ComputerName or IP Address. Default is Localhost.
 .PARAMETER ErrorLog
@@ -94,9 +93,7 @@
 .INPUTS
     System.String
 .OUTPUTS
-    System.Management.Automation.PSCustomObject
-.LINK
-    https://github.com/EvolvingSysadmin/PowerShell/blob/main/scripts/Get-ComputerInfo.ps1
+    System.Management.Automation.PSCustomObject  
 .NOTES
    #requires -Version 3
    Written by https://github.com/lazywinadmin

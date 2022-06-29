@@ -1,11 +1,11 @@
 function Test-RemoteDesktop {
 <#
-.SYNOPSIS
+.DESCRIPTION
   Function to check if RDP is enabled
-.EXAMPLE
-   PS C:\> Test-RemoteDesktopIsEnabled -ComputerName SERVER01,SERVER02
 .LINK
-    https://github.com/EvolvingSysadmin/PowerShell/blob/main/scripts/Test-RemoteDesktop.PS1
+    https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/hosts/admin/Test-RemoteDesktop.ps1
+.EXAMPLE
+   PS C:\> Test-RemoteDesktop -ComputerName SERVER01,SERVER02
 .NOTES
     Written by https://github.com/lazywinadmin
 #>
