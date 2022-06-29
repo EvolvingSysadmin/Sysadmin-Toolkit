@@ -45,7 +45,7 @@
 - Use Case: run this script to obtain the local admin of the specified computer
 - Usage: run `Get-LocalAdmin.ps1` to import the function `Get-LocalAdministratorBuiltin`.
   - Command: `PS C:\> Get-LocalAdministratorBuiltin -ComputerName $Target`
-  - Result: outputs the local administrator information to the console about the computer defined by the -ComputerName parameter, which is $Target in this case
+  - Result: displays the local administrator information to the console about the computer defined by the -ComputerName parameter, which is $Target in this case
 
 ## Get Local Users
 - Tool: [get-localusers.ps1](/tools/users/Get-LocalUsers.ps1)
