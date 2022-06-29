@@ -1,6 +1,12 @@
 <#
 .DESCRIPTION
-    Individual commands for navigating around Microsoft 365 objects 
+    Individual PowerShell commands for navigating Azure Active Directory objects
+.LINK
+    https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/users/Get-AzureUserInfo.ps1
+.NOTES
+    Writen by https://github.com/EvolvingSysadmin
+.EXAMPLES
+    Run each command individually to complete the respective task
 #>
 
 # Connect to Azure:

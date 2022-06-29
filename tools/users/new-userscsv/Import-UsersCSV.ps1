@@ -1,8 +1,8 @@
 <#
 .DESCRIPTION
-    function to input unique user info into CSV (passwords must meet domain complexity requirements) -> point script to CSV
+    PowerShell function to input unique user info into CSV (passwords must meet domain complexity requirements) -> point script to CSV
 .LINK
-    
+    https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/users/new-userscsv/Import-UsersCSV.ps1
 .PARAMETER Path
     Specifies path to CSV 
 .NOTES
@@ -10,11 +10,12 @@
     Francois-Xavier Cat
     lazywinadmin.com
     @lazywinadmin
+    Passworsd in the CSV must meet domain password requirements
 .EXAMPLE
-    PS C:\> Import-Csv -Path C:\ADUsers.csv
+    PS C:\> Import-UsersCSV -Path C:\ADUsers.csv
 #>
 
-Import-Csv "C:\ADUsers.csv" | ForEach-Object {
+Import-UsersCSV "C:\ADUsers.csv" | ForEach-Object {
     $upn = $_.SamAccountName + # samaccountname.com
     New-ADUser -Name $_.Name `
      -GivenName $_."GivenName" `
