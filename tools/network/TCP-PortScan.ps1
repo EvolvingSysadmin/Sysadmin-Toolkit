@@ -1,14 +1,12 @@
 <#
-	.SYNOPSIS
-	
-	.DESCRIPTION
-	
-	.PARAMETER 
-
-    .NET 4.5 required
-  
-    Examples:
-
+.DESCRIPTION
+  PowerShell script to scan TCP ports for a given host and saves the results to ".\scanresults.txt"
+.LINK
+  https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/network/Get-PortScan.ps1
+.NOTES
+  .NET 4.5 required
+  Modified by https://github.com/EvolvingSysadmin
+.EXAMPLE
     port-scan-tcp 10.10.0.1 137
     port-scan-tcp 10.10.0.1 (135,137,445)
     port-scan-tcp (gc .\ips.txt) 137
@@ -16,11 +14,8 @@
     0..255 | foreach { port-scan-tcp 10.10.0.$_ 137 }
     0..255 | foreach { port-scan-tcp 10.10.0.$_ (135,137,445) }
     logs to txt in same directory
-
-    https://www.infosecmatter.com/port-scanner-in-powershell-tcp-udp-ps1/
-
-
 #>
+
 Function port-scan-tcp {
     param($hosts,$ports)
     if (!$ports) {

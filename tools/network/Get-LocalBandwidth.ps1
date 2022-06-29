@@ -1,4 +1,16 @@
-﻿#get-localbandwidth.ps1
+﻿<#
+.DESCRIPTION
+   PowerShell script to measure the Network Interface input and output over 30 seconds
+.LINK
+   https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/network/Get-LocalBandwidth.ps1
+.NOTES
+   Written by https://github.com/EvolvingSysadmin
+.EXAMPLE
+   PS C:\> .\Get-LANScan.ps1
+#>
+
+
+#get-localbandwidth.ps1
 # Measure the Network interface IO over a period of half a minute (0.5)
 
 $startTime = get-date
@@ -11,7 +23,7 @@ $totalBandwidth = 0
 while ($timeSpan -gt 0)
 {
    # Get an object for the network interfaces, excluding any that are currently disabled.
-   $colInterfaces = Get-WmiObject -class Win32_PerfFormattedData_Tcpip_NetworkInterface |select BytesTotalPersec, CurrentBandwidth,PacketsPersec|where {$_.PacketsPersec -gt 0}
+   $colInterfaces = Get-WmiObject -class Win32_PerfFormattedData_Tcpip_NetworkInterface |select-object BytesTotalPersec, CurrentBandwidth,PacketsPersec|where-object {$_.PacketsPersec -gt 0}
 
    foreach ($interface in $colInterfaces) {
       $bitsPerSec = $interface.BytesTotalPersec * 8

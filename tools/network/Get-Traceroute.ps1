@@ -4,8 +4,7 @@ An MTR clone for PowerShell.
 Written by Tyler Applebaum.
 Version 2.0
 .LINK
-https://gist.github.com/tylerapplebaum/dc527a3bd875f11871e2
-http://www.team-cymru.org/IP-ASN-mapping.html#dns
+https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/network/Get-Traceroute.ps1
 .DESCRIPTION
 Runs a traceroute to a specified target; sends ICMP packets to each hop to measure loss and latency.
 Big shout out to Team Cymru for the ASN resolution.

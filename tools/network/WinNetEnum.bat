@@ -1,8 +1,9 @@
 @echo off
 
-:: WinNetEnum.bat: Simple script provides available windows networking information.
-:: @ryanheavican.com
-:: https://ryanheavican.com/
+:: DESCRIPTION: Batch script that provides available windows networking information
+:: LINK: https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/network/WinNetEnum.bat
+:: NOTES: written by https://github.com/EvolvingSysadmin
+:: EXAMPLES: C:\> .\WinNetEnum.bat
 
 :start
 SET var=0

@@ -37,14 +37,10 @@ Function Invoke-Ping {
     $Responding = $Computers | Invoke-Ping -Quiet
     # Create a list of computers that successfully responded to Test-Connection
 .LINK
-    https://gallery.technet.microsoft.com/scriptcenter/Invoke-Ping-Test-in-b553242a
-.FUNCTIONALITY
-    Computers
+    https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/network/Invoke-Ping.ps1
 .NOTES
     Warren F
     http://ramblingcookiemonster.github.io/Invoke-Ping/
-.LINK
-    https://github.com/lazywinadmin/PowerShell
 #>
     [cmdletbinding(DefaultParameterSetName = 'Ping')]
     param (

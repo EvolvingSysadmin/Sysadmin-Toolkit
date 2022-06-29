@@ -26,54 +26,53 @@
 
 ## Get Local Bandwidth
 - Tool: [Get-LocalBandwidth.ps1](/tools/network/Get-LocalBandwidth.ps1)
-- Description: 
-- Use Case: 
-- Usage: run function to get network interface IO over half minute period
-
-## Get TCP and UDP Activity
-- Tool: 
-- Description: 
-- Use Case: 
-- Usage: get connection from specific IP/Port for specific interval in seconds in elevated command prompt
-```
-netstat -naob 1 | find "<IPADDR or PORT>"
-```
+- Description: PowerShell script to measure the Network Interface input and output over 30 seconds
+- Use Case: run this script to obtain bandwidth usage information on a given host
+- Usage: 
+  - Command: `PS C:\> .\Get-LANScan.ps1`
+  - Result: average bandwidth utilization for the current host will be returned to the PowerShell console
 
 ## Get Wireless Network Info
 - Tool: [Get-WLANInfo.ps1](/tools/network/Get-WLANInfo.ps1)
-- Description: 
-- Use Case: 
-- Usage: run individual commands for obtaining wlan info
+- Description: list of network shell commands for obtaining windows wireless networking information
+- Use Case: run these individual commands to obtain information about the wireless LAN of the current host
+- Usage: run individual netsh commands for obtaining wlan info
 
 ## Invoke Ping in Parallel
 - Tool: [Invoke-Ping.ps1](/tools/network/Invoke-Ping.ps1)
-- Description: 
-- Use Case: 
-- Usage: run script to import function Invoke-Ping -> then run Invoke-Ping $SinglePC or Invoke-Ping $ComputersStoredinVariable
+- Description: PowerShell function to test remote connectivity of systems in parallel
+- Use Case: use this function to test the network connectivity of multiple hosts simultaneously
+- Usage: Run `PS C:\> .\Invoke-Ping.ps1` to define the function Invoke-Ping
+    - Command: `PS C:\> Invoke-Ping Server1, Server2, Server3`
+    - Result: Invoke-Ping will return the connectivity information for WSMan, Remote Registry, Remote RPC, RDP, and SMB
 
 ## Network Info Batch Script
 - Tool: [WinNetEnum.bat](/tools/network/WinNetEnum.bat)
-- Description: 
-- Use Case: 
-- Usage: run for options for obtaining windows network info
+- Description: Batch program for obtaining Windows networking information
+- Use Case: run this program to obtain windows networking information
+- Usage: run program `C:\> .\WinNetEnum.bat` and choose the category that corresponds with the networking information to be obtained
 
 ## Port Scanning Options with PowerShell
 - Tool: [Get-PortScan.ps1](/tools/network/Get-PortScan.ps1)
-- Description: 
-- Use Case: 
-- Usage: run individual commands for port scanning options
+- Description: PowerShell commands for scanning ports for a single IP address or range of IP addresses
+- Use Case: run these commands to obtain port information for a host or range of hosts
+- Usage: input relevent IP address information into the commands and run each individually depending on whether a range of ports of an IP or range of IPs for a single port should be scanned
 
 ## Single Host TCP Port Scan
-- Tool: [TCP-PortScan.ps1](/tools/network/TCP-PortScan.ps1) 
-- Description: 
-- Use Case: 
-- Usage: run script to import function port-scan-tcp -> then run port-scan-tcp $TargetIP $Port
+- Tool: [Get-PortScan.ps1](/tools/network/Get-PortScan.ps1)
+- Description: PowerShell script to scan TCP ports of a given host and saves the results to a text file
+- Use Case: run this script to obtain port information for a given host
+- Usage: run `PS C:\> .\Get-PortScan.ps1` to import the port-scan-tcp function into PowerShell
+  - Command: `port-scan-tcp 10.10.0.1 80`
+  - Result: the port-scan-tcp uses the positional argument of 10.10.0.1 to specify the host to scan and the positional argument 80 specifies the port to scan. This command will return the results of the scan to `.scanresults.txt` in the current directory
 
 ## Traceroute Verbose
 - Tool: [Get-Traceroute.ps1](/tools/network/Get-Traceroute.ps1)
-- Description: 
-- Use Case: 
-- Usage: run script and input IP to trace to
+- Description: PowerShell function that runs a network traceroute to the given target and sends ICMP to each networking hop to measure loss and latency
+- Use Case: run this script to enumerate network paths and obtain latency informatin about those paths 
+- Usage: run `PS C:\> .\Get-Traceroute.ps1` to import the `Get-Traceroute` function into PowerShell
+  - Command: `Get-Traceroute 8.8.4.4 -b 512`
+  - Result: performs traceroute on IP address 8.8.4.4 with 512-byte ICMP packets
 
 ## Network Ping Sweep
 - Script: [Get-PingResults.ps1](/tools/domain/Get-PingResults.ps1)
