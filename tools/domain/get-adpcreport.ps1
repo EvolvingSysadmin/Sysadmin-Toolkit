@@ -1,7 +1,7 @@
 <#
 .DESCRIPTION
     Run this script to obtain the AD computer report "\ActiveDirectoryComputers.html" in the same directory as PS script 
-.PARAMETER Replace
+.PARAMETERS
     N/A
 .EXAMPLE
     PS get-adpcreport.ps1
