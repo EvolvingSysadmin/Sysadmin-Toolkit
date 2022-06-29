@@ -1,6 +1,8 @@
 # Host Administration
 
-## Tools
+This page contains PowerShell and Batch tools for Windows host administration. These tools are organized by host information gathering and host task administration.
+
+## Host Information Gathering Tools
 [Add Items to Trusted Hosts](#add-items-to-trusted-hosts)
 [Basic OS & Hardware Report](#basic-os--hardware-report)
 [Computer Info to JSON](#computer-info-to-json)

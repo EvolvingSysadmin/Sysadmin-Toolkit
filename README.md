@@ -11,13 +11,8 @@ PowerShell and Batch scripting can save time for Windows Systems Administrators.
 - [User Administration](/docs/User-Administration.md)
 - [Host Administration](/docs/Host-Administration.md)
 - [Network Enumeration](/docs/Network-Enumeration.md)
-- [Host Forensics](/docs/Host-Forensics.md)
 - [Resources](/docs/Resources.md)
 
 ## Licensing
 
-- The scripts and information in this repository is offered for free through an [MIT License](./LICENSE).
-
-
-
-update metadata links in scripts and other metadata information
+The scripts and information in this repository is offered for free through an [MIT License](./LICENSE).
