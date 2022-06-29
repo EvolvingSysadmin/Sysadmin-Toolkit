@@ -75,10 +75,9 @@
   - Result: performs traceroute on IP address 8.8.4.4 with 512-byte ICMP packets
 
 ## Network Ping Sweep
-- Script: [Get-PingResults.ps1](/tools/domain/Get-PingResults.ps1)
-- Description: Script to obtain all hosts that reply to ICMP ping requests of a specified subnet
-- Use Case:
+- Script: [Get-PingResults.ps1](/tools/network/Get-PingResults.ps1)
+- Description: Powershell script that obtains all hosts that reply to ICMP ping requests of a specified subnet
+- Use Case: run this script to enumerate hosts that respond to ICMP on a network
 - Usage: 
-
-
-
+  - Command: `PS C:\> .\Get-PingResults.ps1`
+  - Result: the script will prompt for the range of IP addresses to be scanned and will return the addresses of hosts that respond to ICMP

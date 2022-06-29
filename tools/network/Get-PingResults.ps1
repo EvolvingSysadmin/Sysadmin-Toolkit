@@ -1,13 +1,12 @@
 <#
-.SYNOPSIS
+.DESCRIPTION
     Script to obtain all hosts that reply to ICMP ping requests of a specified subnet
-.EXAMPLE
-    PS C:\> .\Get-PingResults.ps1
 .LINK
     https://github.com/EvolvingSysadmin/PowerShell/blob/main/scripts/Get-PingResults.ps1
 .NOTES
     Written by https://daniel.streefkerkonline.com/2015/04/28/simple-ip-range-scan-using-powershell/ & modified by https://github.com/EvolvingSysadmin
-    MIT License
+.EXAMPLE
+    PS C:\> .\Get-PingResults.ps1
 #>
 
 $range = Read-Host "Input the first 3 IP address octets of your private network (eg 192.168.1.)"
