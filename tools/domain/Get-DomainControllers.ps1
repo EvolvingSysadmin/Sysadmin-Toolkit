@@ -1,14 +1,13 @@
 <#
-.SYNOPSIS
+.DESCRIPTION
     Script to output DC and FSMO role information to the console
-.EXAMPLE
-    PS C:\> .\Get-DomainControllers.ps1
 .LINK
-	https://github.com/EvolvingSysadmin/PowerShell/blob/main/scripts/Get-DomainControllers.ps1
+	https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/domain/Get-DomainControllers.ps1
 .NOTES
     Written by https://github.com/EvolvingSysadmin
     RSAT AD DS Tools feature must be enabled in Windows and the ActiveDirectory PowerShell module installed
-    MIT License
+.EXAMPLE
+    PS C:\> .\Get-DomainControllers.ps1
 #>
 
 $DomainName = (Get-ADDomain).DNSRoot

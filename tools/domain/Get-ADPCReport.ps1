@@ -1,12 +1,14 @@
 <#
 .DESCRIPTION
     Run this script to obtain the AD computer report "\ActiveDirectoryComputers.html" in the same directory as PS script 
+.LINKS
+	https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/domain/Get-ADPCReport.ps1
 .PARAMETERS
     N/A
 .EXAMPLE
-    PS get-adpcreport.ps1
+    PS C:\> ./Get-ADPCReport.ps1
 .NOTES
-    Find more @ryanheavican
+    Written by https://github.com/EvolvingSysadmin
 #>
 
 # This script retrieves all the computers listed in Active Directory and creates an html report.

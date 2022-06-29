@@ -1,8 +1,9 @@
 @echo off
 
-:: WinSysEnum.bat: Simple script provides available windows domain information.
-:: @ryanheavican.com
-:: https://ryanheavican.com/
+:: DESCRIPTION: batch script provides available windows domain information.
+:: LINK: https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/domain/WinDomainEnum.bat
+:: NOTES: written by https://github.com/EvolvingSysadmin
+:: EXAMPLES: C:\> .\WinDomainEnum.bat
 
 :start
 SET var=0
