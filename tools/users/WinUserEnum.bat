@@ -1,8 +1,9 @@
 @echo off
 
-:: WinUserEnum.bat: Simple script provides available windows user information.
-:: https://github.com/EvolvingSysadmin/Penetration-Testing 
-:: https://ryanheavican.com/
+:: DESCRIPTION: batch script provides available windows user information.
+:: LINK: https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/domain/WinDomainEnum.bat
+:: NOTES: written by https://github.com/EvolvingSysadmin
+:: EXAMPLES: C:\> .\WinUserEnum.bat
 
 :start
 SET var=0

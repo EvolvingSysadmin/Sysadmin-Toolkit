@@ -1,12 +1,14 @@
 ﻿<#
 .DESCRIPTION
-    This PowerShell script can be used to fetch list of users and their Group membership along with few other details from remote Windows servers.Mention list of servers in a text file called Servers.txt and execute it. It takes less time to run against each server specified in the servers.txt by first testing connection to them and only if the connection test passes it goes on fetching user lists else it skips that server.                                                     
+    This PowerShell script can be used to fetch list of users and their Group membership along with few other details from remote Windows servers. Mention list of servers in a text file called Servers.txt and execute it. It takes less time to run against each server specified in the servers.txt by first testing connection to them and only if the connection test passes it goes on fetching user lists else it skips that server.                                                     
+.LINK
+    https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/users/Get-LocalUsers.ps1
 .PARAMETER
     Run in same directory against servers.txt, execute, and view exported LocalUsers.csv                 
 .NOTES
     Written by Prakash Kumar 12:58 PM 8/5/2015  
 .EXAMPLE
-    PS get-localusers.ps1
+    PS C:\> .\Get-LocalUsers.ps1
     Read List of servers from a Text file and fetch all local users from the servers mentioned in it. 
     List of local users from servers is exported in CSV file at the same location.                                                      
 #>

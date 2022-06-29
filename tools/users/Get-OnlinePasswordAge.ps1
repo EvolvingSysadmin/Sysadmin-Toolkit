@@ -7,7 +7,6 @@
 	PS c:\> .\Get-OnlinePasswordAge.ps1
 .NOTES
     Written by https://github.com/EvolvingSysadmin
-    MIT License
 #>
 
 # Connect to Microsoft 365 Tenant:
