@@ -1,24 +1,24 @@
-# Get SID from local or domain username by replacing INPUT-USER with username
 
 <#
 .DESCRIPTION
     portion of script to get SID from username or portion of script to get username from SID
-.VARIABLE $USER
-    Specifies the username
-.VARIABLE $SID
-    Specifies the SID
+.LINK
+    https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/users/Get-SIDInfo.ps1
 .NOTES
-    Compiled by @ryanheavican
+    Written by https://github.com/EvolvingSysadmin
+.EXAMPLE
+    Specify the domain username as the $USER variable to obtain the SID from the username
+    Specify the SID as the $SID variable to obtain the username from the SID
 #>
 
-# Get SID from Username by inputing username:
+# SID from Username
 $USER = "CONTOSO\UserName"
 $objUser = New-Object System.Security.Principal.NTAccount($USER)
 $strSID = $objUser.Translate([System.Security.Principal.SecurityIdentifier])
 $strSID.Value
 $strSID = $objUser.Translate([System.Security.Principal.SecurityIdentifier])
 
-# Get username from SID by replacing INPUT-SID with SID:
+# Username from SID
 $SID="S-1-5-21-1139129701-2612344368-2231220158-1280"
 $objSID = New-Object System.Security.Principal.SecurityIdentifier `
     ("$SID")
