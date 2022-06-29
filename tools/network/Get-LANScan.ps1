@@ -1,18 +1,13 @@
 <#
 .DESCRIPTION
-    PSLANScan is a PowerShell module for layer 2 host discovery
-	It quickly finds live hosts on your network segment given a list of IP addresses
-.USAGE
-    Find-LANHosts	
-.VARIABLES
-    $IPs = 1..254 | % {"172.18.5.$_"}
-    Find-LANHosts -IP $IPs
-
-    1..254 | % {"192.168.1.$_"} | Find-LANHosts -ClearARPCache
-
-    1..254 | % {"10.1.1.$_"} | Find-LANHosts -DelayMS 5
+    PSLANScan is a PowerShell function for layer 2 host discovery. it quickly finds live hosts on your network segment given a list of IP addresses.
+.LINK
+    https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/network/Get-LANScan.ps1
 .NOTES
-    https://github.com/mdjx/PSLANScan
+    Written by https://github.com/mdjx/PSLANScan
+.EXAMPLE
+    $IPs = 1..254 | % {"192.168.1.$_"}
+    Find-LANHosts -IP $IPs
 #>
 
 function Find-LANHosts {

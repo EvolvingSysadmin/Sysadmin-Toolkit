@@ -14,9 +14,15 @@
 
 ## Get LAN Scan
 - Tool: [Get-LANScan.ps1](/tools/network/Get-LANScan.ps1)
-- Description: 
-- Use Case: 
-- Usage: run script, run function to fun layer 2 hosts from range of IP addresses
+- Description: PowerShell function that returns a list of live hosts given a list of IP addresses
+- Use Case: use this script to enunmerate network hosts
+- Usage: run the script `PS C:\> .\Get-LANScan.ps1` to define the `Find-LANHosts` PowerShell function. The $IPs variable must be defined with the relevant IP information prior to using the functinon
+    - Command: 
+    ```
+    PS C:\> $IPs = 1..254 | % {"192.168.1.$_"}
+    PS C:\> Find-LANHosts -IP $IPs
+    ```
+    - Result: script will return IP and MAC addresses of hosts on the given network segment 
 
 ## Get Local Bandwidth
 - Tool: [Get-LocalBandwidth.ps1](/tools/network/Get-LocalBandwidth.ps1)
