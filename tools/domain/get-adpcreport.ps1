@@ -4,9 +4,9 @@
 .PARAMETERS
     N/A
 .EXAMPLE
-    PS get-adpcreport.ps1
+    PS Get-ADPCReport.ps1
 .NOTES
-    Find more @ryanheavican
+    Written by https://github.com/EvolvingSysadmin
 #>
 
 # This script retrieves all the computers listed in Active Directory and creates an html report.
