@@ -3,28 +3,21 @@
 This page contains PowerShell and Batch tools for Windows user administration.
 
 ## Tools
+- [Get-AzureUserInfo.ps1](#get-azureuserinfo.ps1)
+- [Get-LocalAdmin.ps1](#get-localadmin.ps1)
+- [Get-LocalUsers.ps1](#get-localusers.ps1)
+- [Get-OnlinePasswordAge.ps1](#get-onlinepasswordage.ps1)
+- [Get-SIDInfo.ps1](#get-sidinfo.ps1)
+- [Import-UsersCSV.ps1](#import-userscsv.ps1)
+- [WinUserEnum.bat](#winuserenum.bat)
 
-- [Get Azure Password Age](#get-azure-password-age)
-- [Get Azure User Info](#get-azure-user-info)
-- [Get Local Admin](#get-local-admin)
-- [Get Local Users](#get-local-users)
-- [Get SID Info](#get-sid-info)
-- [Import Users from CSV](#import-users-from-csv)
-- [User Info Batch Tool](#user-info-batch-tool)
-
-### Get Azure Password Age
-- Script: [Get-OnlinePasswordAge.ps1](/tools/users/Get-OnlinePasswordAge.ps1)
-- Description: PowerShell commands that return a list of passwords change dates for Microsoft Online Exchange users
-- Use Case: run the commands in this script to obtain  about Microsoft Online Exchange user password information
-- Usage: contains individual commands for connecting to Microsoft Exchange Online and obtaining password information
-
-## Get Azure User Info
+## Get-AzureUserInfo.ps1
 - Tool: [Get-AzureUserInfo.ps1](/tools/users/Get-AzureUserInfo.ps1)
 - Description: PowerShell commands for navigating Azure Active Directory objects
 - Use Case: run these commands to use PowerShell to administer Azure Active Directory 
 - Usage: contains individual commands for navigating Azure user objects
 
-## Get Local Admin
+## Get-LocalAdmin.ps1
 - Tool: [Get-LocalAdmin.ps1](/tools/users/Get-LocalAdmin.ps1)
 - Description: PowerShell function to get the local administration of the specified computer
 - Use Case: run this script to obtain the local admin of the specified computer
@@ -32,7 +25,7 @@ This page contains PowerShell and Batch tools for Windows user administration.
   - Command: `PS C:\> Get-LocalAdministratorBuiltin -ComputerName $Target`
   - Result: displays the local administrator information to the console about the computer defined by the -ComputerName parameter, which is $Target in this case
 
-## Get Local Users
+## Get-LocalUsers.ps1
 - Tool: [Get-LocalUsers.ps1](/tools/users/Get-LocalUsers.ps1)
 - Description: PowerShell script to obtain a list of local users and group memberships for a remote computer
 - Use Case: run this script to obtain local user information for a remote computer
@@ -40,7 +33,13 @@ This page contains PowerShell and Batch tools for Windows user administration.
   - Command: `PS C:\> .\Get-LocalUsers.ps1`
   - Result: creates `LocalUSers.csv` which contains the local users for the computers denoted in `Servers.txt`. These files should be in the same directory as `Get-LocalUsers.ps1`
 
-## Get SID Info
+## Get-OnlinePasswordAge.ps1
+- Script: [Get-OnlinePasswordAge.ps1](/tools/users/Get-OnlinePasswordAge.ps1)
+- Description: PowerShell commands that return a list of passwords change dates for Microsoft Online Exchange users
+- Use Case: run the commands in this script to obtain  about Microsoft Online Exchange user password information
+- Usage: contains individual commands for connecting to Microsoft Exchange Online and obtaining password information
+
+## Get-SIDInfo.ps1
 - Tool: [Get-SIDInfo.ps1](/tools/users/Get-SIDInfo.ps1)
 - Description: PowerShell commands for obtain SID information about a given domain user
 - Use Case: use these commands when an SID must be obtained from a known domain username or when a domain username must be obtained from a known SID 
@@ -50,7 +49,7 @@ This page contains PowerShell and Batch tools for Windows user administration.
   - Command: define $SID with the domain user SID and execute the USername from SID commands
   - Result: the domain username for the $SID will be returned
 
-## Import Users from CSV
+## Import-UsersCSV.ps1
 - Tool: [Import-UsersCSV.ps1](/tools/users/new-userscsv/Import-UsersCSV.ps1)
 - Description: PowerShell function to input username from a CSV into Active Directory
 - Use Case: run this PowerShell script to quickly create users from a CSV list of users
@@ -60,7 +59,7 @@ This page contains PowerShell and Batch tools for Windows user administration.
   - Command: `PS C:\> Import-UsersCSV -Path C:\ADUsers.csv`
   - Result: inputs the users specified in `C:\ADUsers.csv` into Active Directory
 
-## User Info Batch Tool
+## WinUserEnum.bat
 - Tool: [WinUserEnum.bat](/tools/users/WinUserEnum.bat)
 - Description: Batch script that returns windows user information
 - Use Case: run this script to obtain user information about a given computer or domain environment

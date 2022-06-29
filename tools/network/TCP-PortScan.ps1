@@ -16,7 +16,7 @@
     logs to txt in same directory
 #>
 
-Function port-scan-tcp {
+Function tcp-portscan {
     param($hosts,$ports)
     if (!$ports) {
       Write-Host "usage: port-scan-tcp <host|hosts> <port|ports>"
