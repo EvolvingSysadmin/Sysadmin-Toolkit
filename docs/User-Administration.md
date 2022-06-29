@@ -1,5 +1,7 @@
 # User Administration
 
+This page contains PowerShell and Batch tools for Windows user administration.
+
 ## Tools
 
 - [Get Azure Password Age](#get-azure-password-age)

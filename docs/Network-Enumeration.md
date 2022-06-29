@@ -1,9 +1,10 @@
 # Network Enumeration
 
+This page contains PowerShell and Batch tools for Windows network enumeration.
+
 ## Tools
 - [Get LAN Scan](#get-lan-scan)
 - [Get Local Bandwidth](#get-local-bandwidth)
-- [Get TCP and UDP Activity](#get-tcp-and-udp-activity)
 - [Get Wireless Network Info](#get-wireless-network-info)
 - [Invoke Ping in Parallel](#invoke-ping-in-parallel)
 - [Network Info Batch Script](#network-info-batch-script)
