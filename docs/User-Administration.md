@@ -33,12 +33,6 @@
 - Use Case: run the commands in this script to obtain  about Microsoft Online Exchange user password information
 - Usage: contains individual commands for connecting to Microsoft Exchange Online and obtaining password information
 
-## Get AD Sam Usernames
-- Tool: [get-AD-sam-names.ps1](/tools/users/Get-ADSAMUsernames.ps1)
-- Description: 
-- Use Case: 
-- Usage: commands for getting a simple list of domain user's sam names
-
 ## Get Local Admin
 - Tool: [Get-LocalAdmin.ps1](/tools/users/Get-LocalAdmin.ps1)
 - Description: PowerShell function to get the local administration of the specified computer
@@ -48,25 +42,21 @@
   - Result: displays the local administrator information to the console about the computer defined by the -ComputerName parameter, which is $Target in this case
 
 ## Get Local Users
-- Tool: [get-localusers.ps1](/tools/users/Get-LocalUsers.ps1)
-- Description: 
-- Use Case: 
-- Usage: run in same directory against servers.txt, execute, and view exported LocalUsers.csv
-  - Command: 
-  - Result: 
-
- ## Get SID Info
-- Tool: [get-sidinfo.ps1](/tools/users/Get-SIDInfo.ps1)
-- Description: 
-- Use Case: 
-- Usage: replace either username or SID variable and run selection in PowerShell ISE to obtain info
-  - Command: 
-  - Result: 
+- Tool: [Get-LocalUsers.ps1](/tools/users/Get-LocalUsers.ps1)
+- Description: PowerShell script to obtain a list of local users and group memberships for a remote computer
+- Use Case: run this script to obtain local user information for a remote computer
+- Usage: create a txt file called "Servers.txt" that contains a list of the remote computers being targeted then run the script
+  - Command: `PS C:\> .\Get-LocalUsers.ps1`
+  - Result: creates `LocalUSers.csv` which contains the local users for the computers denoted in `Servers.txt`. These files should be in the same directory as `Get-LocalUsers.ps1`
 
 ## User Info Batch Tool
 - Tool: [WinUserEnum.bat](/tools/users/WinUserEnum.bat)
-- Description: 
-- Use Case: 
+- Description: Batch script that returns windows user information
+- Use Case: run this script to obtain user information about a given computer or domain environment
 - Usage: run for options for obtaining user info
-  - Command: 
-  - Result: 
+  - Command: `C:\> .\WinUserEnum.bat`
+  - Result: select the corresponding user type to generate information about that user type
+
+
+
+Get SID info
