@@ -1,3 +1,21 @@
+<#
+.DESCRIPTION
+    This document contains PowerShell commands for administering Microsoft Exchange Online
+.LINK
+    https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/domain/ExchangeOnline-Tools.ps1
+.NOTES
+    Written by https://github.com/EvolvingSysadmin
+.EXAMPLES
+    Run individual commands to connect to and administer Microsoft exchange online
+#>
+
+
+
+
+https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/domain/ExchangeOnline-Tools.ps1
+
+
+
 # Install required exchange PowerShell module (might need later version)
 Install-Module -Name ExchangeOnlineManagement -RequiredVersion 2.0.3
 

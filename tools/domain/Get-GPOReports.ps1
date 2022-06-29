@@ -1,13 +1,13 @@
 <#
-.SYNOPSIS
+.DESCRIPTION
     Script to export all Group Policy into HTML format
-.EXAMPLE
-    PS C:\> .\Get-GPOReports.ps1
 .LINK
-    https://github.com/EvolvingSysadmin/PowerShell/blob/main/scripts/Get-GPOReports.ps1
+    https://github.com/EvolvingSysadmin/Systems-Administration-Toolkit/blob/main/tools/domain/Get-GPOReports.ps1
 .NOTES
     Written by Binu Balan & modified by https://github.com/EvolvingSysadmin
     MIT License
+.EXAMPLE
+    PS C:\> .\Get-GPOReports.ps1
 #>
 
 Import-Module GroupPolicy

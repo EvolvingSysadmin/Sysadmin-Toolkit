@@ -1,18 +1,17 @@
 # Domain Administration
 
-This page contains tools for Windows domain administration.
+This page contains PowerShell and Batch tools for Windows domain administration.
 
 ## Tools
-- [Get Account Lockout Status](#get-account-lockout-status)
-- [Get Active Directory SAM Computer Names](#active-directory-sam-computer-names)
-- [Get Domain Computers HTML Report](#domain-computers-html-report)
-- [Get Domain Controller Roles](#domain-controller-roles)
 - [Domain Info Batch Tool](#domain-info-batch-tool)
-- [Get Domain Password Policy](#domain-password-policy)
-- [Get Domain Reports](#domain-reports)
-- [Get Domain UPNs](#domain-upns)
 - [Exchange Online Tools](#exchange-online-tools)
-- [Get GPO Reports](#gpo-reports)
+- [Get Account Lockout Status](#get-account-lockout-status)
+- [Get Domain Computers HTML Report](#get-domain-computers-html-report)
+- [Get Domain Controller Roles](#get-domain-controller-roles)
+- [Get Domain Password Policy](#get-domain-password-policy)
+- [Get Domain Reports](#get-domain-reports)
+- [Get Domain UPNs](#get-domain-upns)
+- [Get GPO Reports](#get-gpo-reports)
 
 ## Get Account Lockout Status
 - Script: [Get-AccountLockoutStatus.ps1](/tools/domain/Get-AccountLockoutStatus.ps1)
@@ -78,18 +77,14 @@ This page contains tools for Windows domain administration.
 
 ## Exchange Online Tools
 - Tool: [exchangeonline-tools.ps1](/tools/domain/ExchangeOnline-Tools.ps1)
-- Description: 
-- Use Case:
-- Usage: run selections for online exchange administration
-  - Command: 
-  - Result: 
+- Description: PowerShell commands for administering Microsoft Exchange Online
+- Use Case: run the individual commands in this file to use PowerShell to administer Microsoft Online Exchange
+- Usage: run individual commands in the document to perform the task described by the comments
 
-## GPO Reports
+## Get GPO Reports
 - Script: [Get-GPOReports.ps1](/tools/domain/Get-GPOReports.ps1)
-- Description: Script to export all Group Policy into HTML formatv
-- Use Case:
+- Description: PowerShell script that exports all Group Policy into HTML format
+- Use Case: run this script to obtain Group Policy about the current domain environment
 - Usage: 
-  - Command: 
-  - Result: 
-
-
+  - Command: `PS C:\> .\Get-GPOReports.ps1`
+  - Result: generates an HTML report for each GPO policy in the directory "\GPO-Reports"
