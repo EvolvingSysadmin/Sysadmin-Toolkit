@@ -16,7 +16,7 @@ This page contains PowerShell and Batch tools for Windows network enumeration.
 ## Get-LANScan.ps1
 - Tool: [Get-LANScan.ps1](/tools/network/Get-LANScan.ps1)
 - Description: PowerShell function that returns a list of live hosts given a list of IP addresses
-- Use Case: use this script to enunmerate network hosts
+- Use Case: use this script to enumerate network hosts
 - Usage: run the script `PS C:\> .\Get-LANScan.ps1` to define the `Find-LANHosts` PowerShell function. The $IPs variable must be defined with the relevant IP information prior to using the functinon
     - Command: 
     ```
