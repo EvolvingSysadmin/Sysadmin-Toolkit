@@ -21,12 +21,12 @@ This page contains PowerShell and Batch tools for Windows domain administration.
 
 ## Get-AccountLockoutStatus.ps1
 - Script: [Get-AccountLockoutStatus.ps1](/tools/domain/Get-AccountLockoutStatus.ps1)
-- Description: this PowerShell function  checks all domain controllers for lockout event IDs and displays tabled information with Username, Time, Computername and CallerComputer
+- Description: this PowerShell function  checks all domain controllers for lockout event IDs and displays tabled information with Username, Time, Computer Name and Caller Computer
 - Use Case: run this script to obtain information about locked out active directory objects
 - Optional Parameters:
-  - ComputerName: will only check the specified computername instead of all domain controllers
+  - ComputerName: will only check the specified computer name instead of all domain controllers
   - Username: will only check the specified username instead of all usernames
-  - DaysFromToday: will set the number of days to check in the event log, the default is 3 days
+  - DaysFromToday: will set the number of days to check in the event log (the default is 3 days)
 - Usage:
   - Command: `PS C:\> .\Get-AccountLockoutStatus.ps1`
   - Result: defines the Get-AccountLockoutStatus function 
@@ -76,7 +76,7 @@ This page contains PowerShell and Batch tools for Windows domain administration.
 ## Get-PasswordPolicy.ps1
 - Script: [Get-PasswordPolicy.ps1](/tools/domain/Get-PasswordPolicy.ps1)
 - Description: PowerShell script that displays password policy of current domain
-- Use Case: run this script to obtain the passwords policy of the current domain
+- Use Case: run this script to obtain the password policy of the current domain
 - Usage: 
   - Command: `PS C:\> .\Get-PasswordPolicy.ps1`
   - Result: displays passwords policy of current domain
