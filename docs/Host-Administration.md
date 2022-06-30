@@ -56,7 +56,7 @@ This page contains PowerShell, Batch, and Visual Basic tools for Windows host ad
 ## Get-ProcessTime.vbs
 - Tool: [Get-ProcessTime.vbs](/tools/hosts/info/Get-ProcessTime.vbs)
 - Description: Visual Basic script that generates a txt file with process time information in the same directory where it is run
-- Use Case: run this script to onbtain process information for a given host
+- Use Case: run this script to obtain process information for a given host
 - Usage: 
   - Command: `C:\> .\Get-ProcessTime.vbs`
   - Result: a file called `ProcessList.txt` will be generated in the same directory where the script is run
@@ -139,7 +139,7 @@ This page contains PowerShell, Batch, and Visual Basic tools for Windows host ad
 - Tool: [Enable-RemoteDesktop.ps1](/tools/hosts/admin/Enable-RemoteDesktop.ps1)
 - Description: function that enables RemoteDesktop on a local or remote host
 - Use Case: use this function to enable remote desktop on a local or remote host
-- Usage: run `PS C:\> .\Enable-RemoteDesktop.ps1` to importy the function into PowerShell
+- Usage: run `PS C:\> .\Enable-RemoteDesktop.ps1` to import the function into PowerShell
   - Command: `PS C:\> Enable-RemoteDesktop -ComputerName DC01 -Credential (Get-Credential -cred "CONTOSO\Admin")`
   - Result: the script with enable remote desktop on DC01. The `-ComputerName` parameter specifies the host where RemoteDesktop should be enabled and the `-Credential` parameter specifies the the credentials of the authorized user
 

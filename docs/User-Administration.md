@@ -36,7 +36,7 @@ This page contains PowerShell and Batch tools for Windows user administration.
 ## Get-OnlinePasswordAge.ps1
 - Script: [Get-OnlinePasswordAge.ps1](/tools/users/Get-OnlinePasswordAge.ps1)
 - Description: PowerShell commands that return a list of passwords change dates for Microsoft Online Exchange users
-- Use Case: run the commands in this script to obtain  about Microsoft Online Exchange user password information
+- Use Case: run the commands in this script to obtain information about Microsoft Online Exchange user password information
 - Usage: contains individual commands for connecting to Microsoft Exchange Online and obtaining password information
 
 ## Get-SIDInfo.ps1
@@ -46,7 +46,7 @@ This page contains PowerShell and Batch tools for Windows user administration.
 - Usage:
   - Command: define $USER with the domain username and execute the SID from username commands
   - Result: the SID for the $USER will be returned
-  - Command: define $SID with the domain user SID and execute the USername from SID commands
+  - Command: define $SID with the domain user SID and execute the Username from SID commands
   - Result: the domain username for the $SID will be returned
 
 ## Import-UsersCSV.ps1

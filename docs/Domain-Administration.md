@@ -51,7 +51,7 @@ This page contains PowerShell and Batch tools for Windows domain administration.
 
 ## Get-DomainReports.ps1
 - Script: [Get-DomainReports.ps1](/tools/domain/Get-DomainReports.ps1)
-- Description: PowerShell script that generaters 4 csv reports about the current domain environment: user-report.csv, computer-report.csv, groups-report.csv, and domain-report.csv, and places them in a directory named by the user
+- Description: PowerShell script that generates 4 csv reports about the current domain environment: user-report.csv, computer-report.csv, groups-report.csv, and domain-report.csv, and places them in a directory named by the user
 - Use Case: run this script to obtain user, computer, group and domain information about the current environment
 - Usage: 
   - Command: `PS C:\> .\Get-DomainReports.ps1`

@@ -17,7 +17,7 @@ This page contains PowerShell and Batch tools for Windows network enumeration.
 - Tool: [Get-LANScan.ps1](/tools/network/Get-LANScan.ps1)
 - Description: PowerShell function that returns a list of live hosts given a list of IP addresses
 - Use Case: use this script to enumerate network hosts
-- Usage: run the script `PS C:\> .\Get-LANScan.ps1` to define the `Find-LANHosts` PowerShell function. The $IPs variable must be defined with the relevant IP information prior to using the functinon
+- Usage: run the script `PS C:\> .\Get-LANScan.ps1` to define the `Find-LANHosts` PowerShell function. The $IPs variable must be defined with the relevant IP information prior to using the function
     - Command: 
     ```
     PS C:\> $IPs = 1..254 | % {"192.168.1.$_"}
@@ -35,7 +35,7 @@ This page contains PowerShell and Batch tools for Windows network enumeration.
 
 ## Get-PingResults.ps1
 - Script: [Get-PingResults.ps1](/tools/network/Get-PingResults.ps1)
-- Description: Powershell script that obtains all hosts that reply to ICMP ping requests of a specified subnet
+- Description: PowerShell script that obtains all hosts that reply to ICMP ping requests of a specified subnet
 - Use Case: run this script to enumerate hosts that respond to ICMP on a network
 - Usage: 
   - Command: `PS C:\> .\Get-PingResults.ps1`
@@ -45,12 +45,12 @@ This page contains PowerShell and Batch tools for Windows network enumeration.
 - Tool: [Get-PortScan.ps1](/tools/network/Get-PortScan.ps1)
 - Description: PowerShell commands for scanning ports for a single IP address or range of IP addresses
 - Use Case: run these commands to obtain port information for a host or range of hosts
-- Usage: input relevent IP address information into the commands and run each individually depending on whether a range of ports of an IP or range of IPs for a single port should be scanned
+- Usage: input relevant IP address information into the commands and run each individually depending on whether a range of ports of an IP or range of IPs for a single port should be scanned
 
 ## Get-Traceroute.ps1
 - Tool: [Get-Traceroute.ps1](/tools/network/Get-Traceroute.ps1)
 - Description: PowerShell function that runs a network traceroute to the given target and sends ICMP to each networking hop to measure loss and latency
-- Use Case: run this script to enumerate network paths and obtain latency informatin about those paths 
+- Use Case: run this script to enumerate network paths and obtain latency information about those paths 
 - Usage: run `PS C:\> .\Get-Traceroute.ps1` to import the `Get-Traceroute` function into PowerShell
   - Command: `Get-Traceroute 8.8.4.4 -b 512`
   - Result: performs traceroute on IP address 8.8.4.4 with 512-byte ICMP packets
