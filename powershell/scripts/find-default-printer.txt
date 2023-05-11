@@ -1,0 +1,4 @@
+PowerShell Default Printer:
+
+Get-WmiObject -Query " SELECT * FROM Win32_Printer WHERE Default=$true"
+http://newdelhipowershellusergroup.blogspot.com/2013/10/powershell-tip-find-default-printer.html

@@ -1,0 +1,2 @@
+You can uninstall the in-built apps using the Get-AppxPackage *programName* | Remove-AppxPackage command.
+Second method to uninstall your apps is through the $MyApp.Uninstall() command.
