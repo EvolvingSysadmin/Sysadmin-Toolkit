@@ -1,1 +1,32 @@
 Add this stuff https://www.goguardian.com/blog/system-administrator-tools
+
+wmic bios get serialnumber
+
+
+add policy resources like: 
+
+* https://www.sans.org/information-security-policy/
+* https://www.nist.gov/cyberframework
+* https://www.cisecurity.org/controls/cis-controls-list
+* Public Universities
+* https://www.gbv.de/dms/tib-ub-hannover/619774630.pdf
+* 800-53 policy templates 
+
+Linux stuff:
+* https://akashrajpurohit.com/blog/mastering-intermediate-linux-commands-for-efficient-server-management/
+
+
+
+ping.exe -t 8.8.8.8 | ForEach-Object {"{0} - {1}" -f (Get-Date),$_} | Out-File -FilePath "C:\Log\optimum-log.txt" -Append
+
+
+
+
+4f547ca2c9811fd0a7d557d576
+
+
+
+New
+Nd68BmEeiZeXrsX98NQ3Yy5k
+
+Condor!

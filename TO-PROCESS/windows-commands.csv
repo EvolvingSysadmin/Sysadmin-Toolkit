@@ -1,0 +1,16 @@
+Description,Command,Example
+Domain Groups (run on DC),`net`,`net user`
+Dsquery User List,`dsquery`,`dsquery user domainroot`
+User Logon Name from Email,`dsquery`,"`dsquery * domainroot -filter ""(&(objectCategory=Person)(objectClass=User)(mail=e-mailaddress))"" -attr name`"
+Domain Admins of from Remote Trused Domain,`dsquery`,"`dsquery * -filter ""(cn=Domain Admins)"" -attr member -d trustedDomain`"
+Domain Users,`wmic`,`wmic /NAMESPACE:\\root\directory\ldap PATH ds_user GET ds_samaccountname`
+Domain Groups,`wmic`,`wmic /NAMESPACE:\\root\directory\ldap PATH ds_group GET ds_samaccountname`
+Domain Computers,`wmic`,`wmic /NAMESPACE:\\root\directory\ldap PATH ds_computer GET ds_samaccountname`
+View Domain User Info,`net`,"`net user /domain
+ net user pentestuser /domain`"
+Domain Admin Users,`net`,`net group “Domain Admins” /domain`
+,,
+,,
+,,
+,ADSI Edit,
+,"ping.exe -t 8.8.8.8 | ForEach-Object {""{0} - {1}"" -f (Get-Date),$_} | Out-File -FilePath ""C:\Users\RyanHeavican\OneDrive - BC Wire Rope & Rigging\Desktop\optimum-log.txt"" -Append",
