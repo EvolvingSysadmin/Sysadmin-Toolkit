@@ -1,7 +1,5 @@
 # Linux Administration
 
-## Linux Administration
-
 ### Shell operators
 
 * `&` runs a command in the background of your terminal.
