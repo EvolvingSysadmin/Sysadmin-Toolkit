@@ -1,0 +1,11 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: Sysadmin Toolkit
+  structure:
+    - type: space
+      key: space-1
+      title: Sysadmin Toolkit
+      path: sysadmin-toolkit
+      default: true
+      content:
+        directory: ./sysadmin-toolkit
